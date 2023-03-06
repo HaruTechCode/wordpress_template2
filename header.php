@@ -17,19 +17,29 @@
     <header class="header">
       <div class="header__inner">
         <div class="header__logo">
+          <img src="<?php echo esc_url(get_theme_file_uri("/images/main_logo_gray.png")) ?>" alt="" class="header__logo-img">
         </div>
         <ul class="header__items">
           <li class="header__item">
-            <a class="header__link">TOP</a>
+            <a href="" class="header__link">top</a>
           </li>
           <li class="header__item">
-            <a class="header__link">TOP</a>
+            <a href="" class="header__link">about</a>
           </li>
           <li class="header__item">
-            <a class="header__link">TOP</a>
+            <a href="" class="header__link">service</a>
           </li>
           <li class="header__item">
-            <a class="header__link">TOP</a>
+            <a href="" class="header__link">works</a>
+          </li>
+          <li class="header__item">
+            <a href="" class="header__link">news</a>
+          </li>
+          <li class="header__item">
+            <a href="" class="header__contact">
+              <i class="_fa fa-regular fa-envelope header__contact-icon"></i>
+              <div class="header__contact-text">contact</div>
+            </a>
           </li>
         </ul>
       </div>

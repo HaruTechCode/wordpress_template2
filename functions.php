@@ -27,7 +27,18 @@ function my_script_init()
     wp_deregister_script('jquery');
     // jQueryの読み込み
     wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.6.1.min.js', "", "1.0.1", true);
-    wp_enqueue_script('main-js', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.1', true);
+    wp_enqueue_script('slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', ["jquery"], null, true);
+    wp_enqueue_script('main-js', get_template_directory_uri() . '/js/script.js', ['jquery'], '1.0.1', true);
     wp_enqueue_style('style-css', get_template_directory_uri() . '/css/style.css', array(), '1.0.1');
+    wp_enqueue_style('slick-theme', "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css", [], null);
+    wp_enqueue_style('slick', "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css", [], null);
 }
+
 add_action('wp_enqueue_scripts', 'my_script_init');
+
+function my_wp_head()
+{
+    echo '<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">';
+    echo '<link rel="shortcut icon" href="' . esc_url(get_theme_file_uri("/images/favicon.png")) . '">';
+}
+add_action("wp_head", "my_wp_head");

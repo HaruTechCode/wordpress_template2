@@ -13,5 +13,13 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
     "sass": "^1.58.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaruTechCode/wordpress_template2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HaruTechCode/wordpress_template2/issues"
+  },
+  "homepage": "https://github.com/HaruTechCode/wordpress_template2#readme"
 }
