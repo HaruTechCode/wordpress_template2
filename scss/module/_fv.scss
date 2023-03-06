@@ -1,0 +1,40 @@
+@use "../global" as *;
+
+.fv {
+    width: 100%;
+    height: 100vh;
+    padding: 0 80px;
+}
+.fv__inner {
+    display: flex;
+    width: 100%;
+    height: inherit;
+}
+.fv__img {
+    width: calc(100% - 290px);
+    height: inherit;
+}
+
+.fv__text-container {
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+}
+.fv__text-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.fv__text {
+    font-weight: $bold;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+}
+
+.fv__text:nth-child(1) {
+    margin-left: 45px;
+}
