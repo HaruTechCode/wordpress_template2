@@ -1,0 +1,157 @@
+@use "../global" as *;
+//fv
+$fv_text_fz: 60px;
+$fv_text_img_margin: 80px;
+$fv_text_margin: 45px;
+
+.fv {
+    width: 100%;
+    height: 100vh;
+    padding: 0 80px;
+}
+.fv__inner {
+    display: flex;
+    width: 100%;
+    height: inherit;
+}
+.fv__slick {
+    width: calc(
+        //TODO 他の実装方法がないか調べる
+        100% - ($fv_text_fz * 2 + $fv_text_img_margin + $fv_text_margin)
+    );
+}
+
+.fv__slick img {
+    height: 100vh;
+
+    object-fit: cover;
+}
+
+.fv__text-container {
+    display: flex;
+    align-items: center;
+    margin-left: $fv_text_img_margin;
+}
+.fv__text-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.fv__text {
+    font-weight: $bold;
+    font-size: $fv_text_fz;
+    line-height: 1;
+    letter-spacing: -0.01em;
+
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+}
+
+.fv__text:nth-child(1) {
+    margin-left: $fv_text_margin;
+}
+
+//flowing-box
+.flowing-box {
+    margin-top: 118px;
+    .flowing-box__inner {
+        position: relative;
+        height: 150px;
+        overflow: hidden;
+        .flowing-box__body {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: $bold;
+            font-size: 150px;
+            font-family: "Noto Sans JP";
+            white-space: nowrap;
+        }
+    }
+}
+
+//top-about
+.top-about {
+    margin-top: 60px;
+}
+.top-about__inner {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+}
+.top-about__body {
+    margin-left: 60px;
+}
+
+.top-about__title {
+    margin-top: 70px;
+    font-weight: $bold;
+    font-size: 20px;
+    line-height: 2;
+    font-family: "oswald";
+}
+
+.top-about__text {
+    margin-top: 30px;
+    font-weight: $medium;
+    line-height: 2;
+}
+.top-about__link-wrapper {
+    display: flex;
+    margin-top: 46px;
+    padding-right: 20px;
+}
+
+.top-about__link {
+    position: relative;
+    margin-left: auto;
+}
+
+//top-service
+
+.top-service {
+    padding-top: 120px;
+}
+
+.top-service__cards {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 48px;
+    //レスポンシブにするとき
+    //grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.card {
+    position: relative;
+}
+
+.card__title-wrapper {
+    position: absolute;
+    top: 20%;
+    margin-left: 30px;
+}
+
+.card__title-sub {
+    color: $white;
+    font-weight: $bold;
+    font-size: 16px;
+    line-height: 1.2;
+    font-family: "Oswald";
+}
+
+.card__title-main {
+    margin-top: 17px;
+    color: $white;
+    font-weight: $bold;
+    font-size: 26px;
+    line-height: 1.2;
+}
+
+.card__text {
+    margin-top: 14px;
+    color: $black;
+    font-weight: $medium;
+    font-size: 16px;
+    line-height: 2;
+}

@@ -1,5 +1,6 @@
 @use "./base/base";
 @use "./base/reset";
-@use "./global" as *;
+@use "./module/common";
 @use "./module/header";
-@use "./module/fv";
+@use "./page/front_page";
+@use "./global" as *;
