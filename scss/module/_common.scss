@@ -19,6 +19,7 @@
 
 //animation-link
 //Fixme アニメーションのScaleが親要素の長さに依存する(?)のが良くない。
+//TODO aタグはcursor: pointerになるべき
 .animation-link {
     display: inline-block;
     width: 101px;
@@ -27,6 +28,7 @@
     font-size: 14px;
     line-height: calc(40 / 14);
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .animation-link::after {
@@ -61,4 +63,16 @@
 }
 .animation-link:hover::before {
     transform: scale(1, 1);
+}
+
+//buttonに線は要らないかも
+.animation-link--button {
+    width: 146px;
+    padding: 12px 24px;
+    border: 1px solid $navy;
+    border-radius: 4px;
+    line-height: 1;
+}
+.animation-link--button::before {
+    content: none;
 }

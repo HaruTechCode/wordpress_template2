@@ -155,3 +155,48 @@ $fv_text_margin: 45px;
     font-size: 16px;
     line-height: 2;
 }
+
+.card__link-wrapper {
+    display: flex;
+}
+
+.card__link {
+    margin-left: auto;
+}
+
+.top-works {
+    background-color: $lightgray;
+}
+
+.top-works__articles {
+    //
+}
+
+.top-works__article {
+    //
+    display: flex;
+}
+
+.top-works__article-img {
+    //
+}
+
+.top-works__article-body {
+    //
+}
+
+.top-works__article-category {
+    //
+}
+
+.top-works__article-title {
+    //
+}
+
+.top-works__article-text {
+    //
+}
+
+.top-works__article-date {
+    //
+}

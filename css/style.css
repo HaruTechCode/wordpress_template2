@@ -170,6 +170,7 @@ select::-ms-expand {
   font-size: 14px;
   line-height: 2.8571428571;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .animation-link::after {
@@ -205,6 +206,18 @@ select::-ms-expand {
 
 .animation-link:hover::before {
   transform: scale(1, 1);
+}
+
+.animation-link--button {
+  width: 146px;
+  padding: 12px 24px;
+  border: 1px solid #011950;
+  border-radius: 4px;
+  line-height: 1;
+}
+
+.animation-link--button::before {
+  content: none;
 }
 
 .header {
@@ -400,4 +413,20 @@ select::-ms-expand {
   font-weight: 500;
   font-size: 16px;
   line-height: 2;
+}
+
+.card__link-wrapper {
+  display: flex;
+}
+
+.card__link {
+  margin-left: auto;
+}
+
+.top-works {
+  background-color: #f8f8f8;
+}
+
+.top-works__article {
+  display: flex;
 }
