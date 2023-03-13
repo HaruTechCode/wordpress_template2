@@ -163,6 +163,8 @@ select::-ms-expand {
 }
 
 .animation-link {
+  display: inline-block;
+  width: 101px;
   color: #011950;
   font-weight: 500;
   font-size: 14px;
@@ -202,7 +204,7 @@ select::-ms-expand {
 }
 
 .animation-link:hover::before {
-  transform: scale(1.2, 1);
+  transform: scale(1, 1);
 }
 
 .header {

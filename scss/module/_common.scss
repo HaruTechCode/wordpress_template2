@@ -20,6 +20,8 @@
 //animation-link
 //Fixme アニメーションのScaleが親要素の長さに依存する(?)のが良くない。
 .animation-link {
+    display: inline-block;
+    width: 101px;
     color: $navy;
     font-weight: $medium;
     font-size: 14px;
@@ -58,5 +60,5 @@
     transform-origin: left top;
 }
 .animation-link:hover::before {
-    transform: scale(1.2, 1);
+    transform: scale(1, 1);
 }
