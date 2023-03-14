@@ -85,19 +85,34 @@
   <section class="top-works">
     <div class="top-works__inner inner">
       <!-- TODO inview使って左からフェードイン -->
-      <h2 class="top-works-heading large-heading">Works</h2>
+      <h2 class="top-works-heading large-heading js-side-fade-in side-fade-in">Works</h2>
       <!-- TODO パーシャル使ったり、他との共通点を探したり、ワードプレスのデータを入れたり -->
-      <ul class="top-works__articles">
-        <li class="top-works__article">
-          <img src="<?php echo esc_url(get_theme_file_uri("/images/top_works1.jpg")) ?>" alt="" class="top-works__article-img">
-          <div class="top-works__article-body">
-            <div class="top-works__article-category">修理・整備</div>
-            <div class="top-works__article-title">車のドアが開けられなくなった｜ドアロックの交換と...</div>
-            <div class="top-works__article-text">弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...</div>
-            <time class="top-works__article-date" datetime="2022-09-02">2022.09.02</time>
-          </div>
-        </li>
-      </ul>
+      <div class="top-works__articles-wrapper">
+        <ul class="top-works__articles">
+          <li class="top-works__article top-fade-in js-top-fade-in">
+
+            <img src="<?php echo esc_url(get_theme_file_uri("/images/top_works1.jpg")) ?>" alt="" class="top-works__article-img">
+            <div class="top-works__article-body">
+              <div class="top-works__article-category">修理・整備</div>
+              <div class="top-works__article-title">車のドアが開けられなくなった｜ドアロックの交換と...</div>
+              <div class="top-works__article-text">弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...</div>
+              <time class="top-works__article-date" datetime="2022-09-02">2022.09.02</time>
+            </div>
+          </li>
+          <li class="top-works__article top-fade-in js-top-fade-in">
+            <img src="<?php echo esc_url(get_theme_file_uri("/images/top_works1.jpg")) ?>" alt="" class="top-works__article-img">
+            <div class="top-works__article-body">
+              <div class="top-works__article-category">修理・整備</div>
+              <div class="top-works__article-title">車のドアが開けられなくなった｜ドアロックの交換と...</div>
+              <div class="top-works__article-text">弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...</div>
+              <time class="top-works__article-date" datetime="2022-09-02">2022.09.02</time>
+            </div>
+          </li>
+        </ul>
+        <div class="top-works__link-container">
+          <a href="" class="top-works__link animation-link">read more</a>
+        </div>
+      </div>
     </div>
   </section>
 </main>

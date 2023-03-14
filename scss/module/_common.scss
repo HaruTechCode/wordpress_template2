@@ -22,6 +22,7 @@
 //TODO aタグはcursor: pointerになるべき
 .animation-link {
     display: inline-block;
+    position: relative;
     width: 101px;
     color: $navy;
     font-weight: $medium;

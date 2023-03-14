@@ -28,8 +28,8 @@ function my_script_init()
     // jQueryの読み込み
     wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.6.1.min.js', "", "1.0.1", true);
     wp_enqueue_script('slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', ["jquery"], null, true);
-    wp_enqueue_script('inview', 'js/jquery.inview.min.js', ["jquery"], null, true);
-    wp_enqueue_script('main-js', get_template_directory_uri() . '/js/script.js', ['jquery'], '1.0.1', true);
+    wp_enqueue_script('inview', get_template_directory_uri() . '/js/jquery.inview.min.js', ["jquery"], null, true);
+    wp_enqueue_script('main-js', get_template_directory_uri() . '/js/script.js', ['jquery', 'inview'], '1.0.1', true);
     wp_enqueue_style('style-css', get_template_directory_uri() . '/css/style.css', array(), '1.0.1');
     wp_enqueue_style('slick-theme', "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css", [], null);
     wp_enqueue_style('slick', "//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css", [], null);
