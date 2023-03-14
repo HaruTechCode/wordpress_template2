@@ -40,7 +40,7 @@
   </section>
   <section class="top-service">
     <div class="top-service__inner inner">
-      <h2 class="top-service-heading large-heading large-heading--right">Service</h2>
+      <h2 class="top-service__heading large-heading large-heading--right">Service</h2>
       <ul class="top-service__cards">
         <li class="top-service__card card">
           <img src="<?php echo esc_url(get_theme_file_uri("/images/top_service1.jpg")) ?>" alt="" class="card__img">
@@ -85,32 +85,68 @@
   <section class="top-works">
     <div class="top-works__inner inner">
       <!-- TODO inview使って左からフェードイン -->
-      <h2 class="top-works-heading large-heading js-side-fade-in side-fade-in">Works</h2>
+      <h2 class="top-works__heading large-heading js-inview left-fade-in">Works</h2>
       <!-- TODO パーシャル使ったり、他との共通点を探したり、ワードプレスのデータを入れたり -->
       <div class="top-works__articles-wrapper">
         <ul class="top-works__articles">
-          <li class="top-works__article top-fade-in js-top-fade-in">
-
+          <li class="top-works__article top-fade-in js-inview">
             <img src="<?php echo esc_url(get_theme_file_uri("/images/top_works1.jpg")) ?>" alt="" class="top-works__article-img">
             <div class="top-works__article-body">
-              <div class="top-works__article-category">修理・整備</div>
+              <div class="top-works__article-category tag">修理・整備</div>
               <div class="top-works__article-title">車のドアが開けられなくなった｜ドアロックの交換と...</div>
               <div class="top-works__article-text">弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...</div>
-              <time class="top-works__article-date" datetime="2022-09-02">2022.09.02</time>
+              <time class="date" datetime="2022-09-02">2022.09.02</time>
             </div>
           </li>
-          <li class="top-works__article top-fade-in js-top-fade-in">
+          <li class="top-works__article top-fade-in js-inview">
             <img src="<?php echo esc_url(get_theme_file_uri("/images/top_works1.jpg")) ?>" alt="" class="top-works__article-img">
             <div class="top-works__article-body">
-              <div class="top-works__article-category">修理・整備</div>
+              <div class="top-works__article-category tag">修理・整備</div>
               <div class="top-works__article-title">車のドアが開けられなくなった｜ドアロックの交換と...</div>
               <div class="top-works__article-text">弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...</div>
-              <time class="top-works__article-date" datetime="2022-09-02">2022.09.02</time>
+              <time class="date" datetime="2022-09-02">2022.09.02</time>
             </div>
           </li>
         </ul>
         <div class="top-works__link-container">
           <a href="" class="top-works__link animation-link">read more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="top-news">
+    <div class="top-news__inner inner">
+      <div class="top-news__side">
+        <h2 class="top-works__heading large-heading js-inview left-fade-in">top-news</h2>
+        <ul class="top-news__tag-list">
+          <!-- TODO aタグが必要かも。wordPressの関数でタグを表示したあとに修正 -->
+          <li class="top-news__tag-list-item top-news__tag-list-item--selected">すべてのお知らせ</li>
+          <li class="top-news__tag-list-item">トピックス</li>
+          <li class="top-news__tag-list-item">イベント・キャンペーン</li>
+          <li class="top-news__tag-list-item">入庫車情報</li>
+        </ul>
+      </div>
+      <div class="top-news__main">
+        <ul class="top-news__articles">
+          <li class="top-news__article">
+            <div class="top-news__article-info">
+              <time class="date" datetime="2022-09-02">2022.09.02</time>
+              <div class="top-news__tag tag tag--white">トピックス</div>
+              <div class="top-news__tag tag tag--white">イベント・キャンペーン</div>
+            </div>
+            <div class="top-news__article-title">2022年10月8日・9日・10日の3日間、試乗車フェアを開催します</div>
+          </li>
+          <li class="top-news__article">
+            <div class="top-news__article-info">
+              <time class="date" datetime="2022-09-02">2022.09.02</time>
+              <div class="top-news__tag tag tag--white">トピックス</div>
+              <div class="top-news__tag tag tag--white">イベント・キャンペーン</div>
+            </div>
+            <div class="top-news__article-title">2022年10月8日・9日・10日の3日間、試乗車フェアを開催します</div>
+          </li>
+        </ul>
+        <div class="top-news__link-container">
+          <a href="" class="top-news__link animation-link">read more</a>
         </div>
       </div>
     </div>

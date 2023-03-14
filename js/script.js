@@ -47,7 +47,7 @@ $(function () {
 
     // スクロールして表示領域に入ったらclass付与
     $(function () {
-        $(".js-side-fade-in, .js-top-fade-in").on("inview", function () {
+        $(".js-inview").on("inview", function () {
             $(this).addClass("is-inview");
         });
     });
