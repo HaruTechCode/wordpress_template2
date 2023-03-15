@@ -114,6 +114,7 @@
       </div>
     </div>
   </section>
+  <!-- 左に寄りすぎる -->
   <section class="top-news">
     <div class="top-news__inner inner">
       <div class="top-news__side">

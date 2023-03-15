@@ -1,24 +1,24 @@
 @use "../global" as *;
 //fv
 $fv_text_fz: 60px;
-$fv_text_img_margin: 80px;
+$fv_column_gap: 80px;
 $fv_text_margin: 45px;
 
 .fv {
     width: 100%;
     height: 100vh;
-    padding: 0 80px;
 }
 .fv__inner {
     display: flex;
     width: 100%;
     height: inherit;
+    padding: 0 80px;
+
+    column-gap: $fv_column_gap;
 }
 .fv__slick {
-    width: calc(
-        //TODO 他の実装方法がないか調べる。どの幅まで縮まることを想定するかがわからないので、レスポンシブ後に確認する。うまく言語化できればchatGPTも使えるかも
-        100% - ($fv_text_fz * 2 + $fv_text_img_margin + $fv_text_margin)
-    );
+    //TODO 他の実装方法がないか調べる。どの幅まで縮まることを想定するかがわからないので、レスポンシブ後に確認する。うまく言語化できればchatGPTも使えるかも
+    width: calc(100% - ($fv_text_fz * 2 + $fv_column_gap + $fv_text_margin));
 }
 
 .fv__slick img {
@@ -31,7 +31,6 @@ $fv_text_margin: 45px;
 .fv__text-container {
     display: flex;
     align-items: center;
-    margin-left: $fv_text_img_margin;
 }
 .fv__text-wrapper {
     display: flex;
@@ -189,6 +188,8 @@ $fv_text_margin: 45px;
 
 .top-works__article-img {
     width: 290px;
+
+    object-fit: contain;
 }
 
 .top-works__article-body {
@@ -248,6 +249,9 @@ $fv_text_margin: 45px;
     padding-right: 94px;
     border-right: 1px solid $gray4;
 }
+.top-news__tag-list {
+    margin-top: 49px;
+}
 
 .top-news__tag-list {
     //
@@ -268,7 +272,6 @@ $fv_text_margin: 45px;
     position: absolute;
     top: 50%;
     left: -10px;
-    //traslateYでよさそう。webkit-transformなどをつける理由
     transform: translateY(-50%);
     width: 8px;
     height: 8px;
@@ -285,6 +288,7 @@ $fv_text_margin: 45px;
 }
 
 .top-news__main {
+    width: 100%;
     padding: 0 40px;
 }
 
@@ -293,16 +297,17 @@ $fv_text_margin: 45px;
     border-bottom: 1px solid $gray4;
 }
 
-.top-news__article-info {
-    //df
+.top-news__article:not(:first-child) {
+    padding-top: 30px;
 }
 
-.top-news__date {
-    //
+.top-news__tag {
+    margin-left: 34px;
+}
+.top-news__tag + .top-news__tag {
+    margin-left: 20px;
 }
 
-.date {
-    //
+.top-news__article-title {
+    margin-top: 31px;
 }
-
-//flex残り全て
