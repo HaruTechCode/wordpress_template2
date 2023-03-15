@@ -102,6 +102,18 @@
     transition-delay: 0.5s;
 }
 
+.bottom-fade-in {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.bottom-fade-in.is-inview {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
+}
+
 .date {
     color: $gray3;
     font-size: 12px;
@@ -117,6 +129,6 @@
     font-size: 11px;
 }
 
-.tag--white {
+.tag.tag--white {
     background-color: $white;
 }

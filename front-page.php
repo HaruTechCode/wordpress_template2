@@ -95,7 +95,7 @@
               <div class="top-works__article-category tag">修理・整備</div>
               <div class="top-works__article-title">車のドアが開けられなくなった｜ドアロックの交換と...</div>
               <div class="top-works__article-text">弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...</div>
-              <time class="date" datetime="2022-09-02">2022.09.02</time>
+              <time class="top-works__date date" datetime="2022-09-02">2022.09.02</time>
             </div>
           </li>
           <li class="top-works__article top-fade-in js-inview">
@@ -104,7 +104,7 @@
               <div class="top-works__article-category tag">修理・整備</div>
               <div class="top-works__article-title">車のドアが開けられなくなった｜ドアロックの交換と...</div>
               <div class="top-works__article-text">弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...</div>
-              <time class="date" datetime="2022-09-02">2022.09.02</time>
+              <time class="top-works__date date" datetime="2022-09-02">2022.09.02</time>
             </div>
           </li>
         </ul>
@@ -117,8 +117,8 @@
   <section class="top-news">
     <div class="top-news__inner inner">
       <div class="top-news__side">
-        <h2 class="top-works__heading large-heading js-inview left-fade-in">top-news</h2>
-        <ul class="top-news__tag-list">
+        <h2 class="top-works__heading large-heading js-inview left-fade-in">News</h2>
+        <ul class="top-news__tag-list js-inview bottom-fade-in">
           <!-- TODO aタグが必要かも。wordPressの関数でタグを表示したあとに修正 -->
           <li class="top-news__tag-list-item top-news__tag-list-item--selected">すべてのお知らせ</li>
           <li class="top-news__tag-list-item">トピックス</li>
@@ -130,7 +130,7 @@
         <ul class="top-news__articles">
           <li class="top-news__article">
             <div class="top-news__article-info">
-              <time class="date" datetime="2022-09-02">2022.09.02</time>
+              <time class="top-news__date date" datetime="2022-09-02">2022.09.02</time>
               <div class="top-news__tag tag tag--white">トピックス</div>
               <div class="top-news__tag tag tag--white">イベント・キャンペーン</div>
             </div>
@@ -138,7 +138,7 @@
           </li>
           <li class="top-news__article">
             <div class="top-news__article-info">
-              <time class="date" datetime="2022-09-02">2022.09.02</time>
+              <time class="top-news__date date" datetime="2022-09-02">2022.09.02</time>
               <div class="top-news__tag tag tag--white">トピックス</div>
               <div class="top-news__tag tag tag--white">イベント・キャンペーン</div>
             </div>
