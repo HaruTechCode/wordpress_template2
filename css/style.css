@@ -23,10 +23,6 @@ a:hover {
   opacity: 0.7;
 }
 
-._fa:before {
-  font-family: "Font Awesome 5 Free";
-}
-
 *,
 *::before,
 *::after {
@@ -150,6 +146,10 @@ select::-ms-expand {
   .inner {
     padding: 0 20px;
   }
+}
+
+._fa:before {
+  font-family: "Font Awesome 5 Free";
 }
 
 .large-heading {
@@ -321,8 +321,64 @@ select::-ms-expand {
   text-transform: uppercase;
 }
 
+.header__contact-mail-icon {
+  width: 22px;
+  height: 22px;
+}
+
 .header__contact-text {
   margin-left: 10px;
+}
+
+.footer__contact {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+}
+
+.footer__contact-body {
+  display: flex;
+  background-color: #011950;
+  color: #ffffff;
+}
+
+.footer__contact-text {
+  font-size: 18px;
+  line-height: 1.6666666667;
+}
+
+.footer__contact-button {
+  display: flex;
+  width: 235px;
+  height: 68px;
+  padding: 26px 33px 21px 30px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  font-size: 22px;
+  font-family: "Noto Sans JP";
+}
+.footer__contact-button img {
+  width: 22px;
+  height: 22px;
+}
+.footer__contact-button p {
+  margin-left: 16px;
+}
+
+.footer__contact-small-text {
+  font-size: 14px;
+  font-family: "Noto Sans JP";
+}
+
+.footer__contact-small-text {
+  margin-top: 24px;
+}
+
+.footer__contact-button {
+  margin-top: 35px;
+}
+
+.footer__contact-button:not(:first-child) {
+  margin-top: 20px;
 }
 
 .fv {
@@ -384,6 +440,7 @@ select::-ms-expand {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  color: #011950;
   font-weight: 700;
   font-size: 150px;
   font-family: "Noto Sans JP";

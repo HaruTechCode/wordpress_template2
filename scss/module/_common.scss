@@ -8,6 +8,10 @@
     }
 }
 
+._fa:before {
+    font-family: $fa-font;
+}
+
 .large-heading {
     font-weight: $bold;
     font-size: 70px;

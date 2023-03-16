@@ -37,7 +37,7 @@
           </li>
           <li class="header__item">
             <a href="" class="header__contact">
-              <i class="_fa fa-regular fa-envelope header__contact-icon"></i>
+              <img src="<?php echo esc_url(get_theme_file_uri("/images/mail-icon.svg")) ?>" alt="" class="header__contact-mail-icon">
               <div class="header__contact-text">contact</div>
             </a>
           </li>
