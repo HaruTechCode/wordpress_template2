@@ -15,10 +15,18 @@ $fv_text_margin: 45px;
     padding: 0 80px;
 
     column-gap: $fv_column_gap;
+    @include mq("md") {
+        padding: 0;
+    }
 }
+
 .fv__slick {
     //TODO 他の実装方法がないか調べる。どの幅まで縮まることを想定するかがわからないので、レスポンシブ後に確認する。うまく言語化できればchatGPTも使えるかも
     width: calc(100% - ($fv_text_fz * 2 + $fv_column_gap + $fv_text_margin));
+
+    @include mq("md") {
+        width: 100%;
+    }
 }
 
 .fv__slick img {
@@ -31,6 +39,10 @@ $fv_text_margin: 45px;
 .fv__text-container {
     display: flex;
     align-items: center;
+
+    @include mq("md") {
+        display: none;
+    }
 }
 .fv__text-wrapper {
     display: flex;
@@ -249,6 +261,7 @@ $fv_text_margin: 45px;
 }
 .top-news__side {
     padding-right: 94px;
+    padding-left: 10px;
     border-right: 1px solid $gray4;
 }
 .top-news__tag-list {

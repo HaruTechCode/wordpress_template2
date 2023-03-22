@@ -171,6 +171,7 @@ select::-ms-expand {
   line-height: 2.8571428571;
   text-transform: uppercase;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .animation-link::after {
@@ -222,7 +223,7 @@ select::-ms-expand {
 
 .left-fade-in {
   opacity: 0;
-  transform: translateX(-300px);
+  transform: translateX(-100px);
   transition: opacity 0.8s, transform 0.8s;
 }
 
@@ -234,7 +235,7 @@ select::-ms-expand {
 
 .top-fade-in {
   opacity: 0;
-  transform: translateY(-300px);
+  transform: translateY(-100px);
   transition: opacity 0.8s, transform 0.8s;
 }
 
@@ -272,6 +273,21 @@ select::-ms-expand {
 
 .tag.tag--white {
   background-color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .md-none {
+    display: none;
+  }
+}
+
+.md-show {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .md-show {
+    display: block;
+  }
 }
 
 .header {
@@ -336,6 +352,10 @@ select::-ms-expand {
 .footer__contact-img {
   width: 57.6388%;
 }
+.footer__contact-img img {
+  height: 100%;
+  object-fit: cover;
+}
 
 .footer__contact-body {
   display: flex;
@@ -343,6 +363,7 @@ select::-ms-expand {
   justify-content: center;
   align-items: center;
   width: 42.3612%;
+  padding: 20px;
   background-color: #011950;
   color: #ffffff;
 }
@@ -365,6 +386,8 @@ select::-ms-expand {
   white-space: nowrap;
 }
 .footer__contact-button img {
+  position: relative;
+  top: -3px;
   width: 22px;
   height: 22px;
 }
@@ -395,14 +418,14 @@ select::-ms-expand {
 
 .footer__main {
   display: flex;
-  background-color: #011950;
+  background-color: #001135;
 }
 
 .footer__main-body {
   width: 79.167%;
   margin-top: 100px;
   margin-bottom: 63px;
-  margin-left: 170px;
+  padding-left: 15%;
 }
 
 .footer__links {
@@ -427,6 +450,7 @@ select::-ms-expand {
 }
 
 .footer__copyright {
+  display: inline-block;
   margin-top: 25px;
   color: #ffffff;
   font-size: 12px;
@@ -458,9 +482,19 @@ select::-ms-expand {
   padding: 0 80px;
   column-gap: 80px;
 }
+@media screen and (max-width: 768px) {
+  .fv__inner {
+    padding: 0;
+  }
+}
 
 .fv__slick {
   width: calc(100% - 245px);
+}
+@media screen and (max-width: 768px) {
+  .fv__slick {
+    width: 100%;
+  }
 }
 
 .fv__slick img {
@@ -472,6 +506,11 @@ select::-ms-expand {
 .fv__text-container {
   display: flex;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .fv__text-container {
+    display: none;
+  }
 }
 
 .fv__text-wrapper {
@@ -687,6 +726,7 @@ select::-ms-expand {
 
 .top-news__side {
   padding-right: 94px;
+  padding-left: 10px;
   border-right: 1px solid #e2e2e2;
 }
 

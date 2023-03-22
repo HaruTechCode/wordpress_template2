@@ -2,12 +2,18 @@
 <main>
     <div class="fv">
       <div class="fv__inner">
-        <div class="fv__slick js-slick">
+        <div class="fv__slick js-slick md-none">
           <img src="<?php echo esc_url(get_theme_file_uri("/images/fv01.jpg")) ?>" alt="">
           <img src="<?php echo esc_url(get_theme_file_uri("/images/fv02.jpg")) ?>" alt="">
           <img src="<?php echo esc_url(get_theme_file_uri("/images/fv03.jpg")) ?>" alt="">
           <img src="<?php echo esc_url(get_theme_file_uri("/images/fv04.jpg")) ?>" alt="">
         </div>
+        <!-- <div class="fv__slick-sp js-slick">
+          <img src="<?php echo esc_url(get_theme_file_uri("/images/fv-sp01.jpg")) ?>" alt="">
+          <img src="<?php echo esc_url(get_theme_file_uri("/images/fv-sp02.jpg")) ?>" alt="">
+          <img src="<?php echo esc_url(get_theme_file_uri("/images/fv-sp03.jpg")) ?>" alt="">
+          <img src="<?php echo esc_url(get_theme_file_uri("/images/fv-sp04.jpg")) ?>" alt="">
+        </div> -->
         <div class="fv__text-container">
           <div class="fv__text-wrapper">
             <div class="fv__text">あなたの</div>

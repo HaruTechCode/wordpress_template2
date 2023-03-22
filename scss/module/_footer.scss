@@ -5,6 +5,11 @@
 }
 .footer__contact-img {
     width: 57.6388%;
+    img {
+        height: 100%;
+
+        object-fit: cover;
+    }
 }
 
 .footer__contact-body {
@@ -13,6 +18,7 @@
     justify-content: center;
     align-items: center;
     width: 42.3612%;
+    padding: 20px;
     background-color: $navy;
     color: $white;
 }
@@ -34,6 +40,8 @@
     white-space: nowrap;
 
     img {
+        position: relative;
+        top: -3px;
         width: 22px;
         height: 22px;
     }
@@ -63,14 +71,14 @@
 
 .footer__main {
     display: flex;
-    background-color: $navy;
+    background-color: $dark_navy2;
 }
 
 .footer__main-body {
     width: 79.167%;
     margin-top: 100px;
     margin-bottom: 63px;
-    margin-left: 170px;
+    padding-left: 15%;
 }
 
 .footer__links {
@@ -93,6 +101,7 @@
     margin-left: 20px;
 }
 .footer__copyright {
+    display: inline-block;
     margin-top: 25px;
     color: $white;
     font-size: 12px;
