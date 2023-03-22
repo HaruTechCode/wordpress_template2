@@ -1,11 +1,14 @@
 @use "../global" as *;
 
 .inner {
-    padding: 0 170px;
-
-    @include mq("md") {
-        padding: 0 20px;
-    }
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+    //@include mq("md") {
+    //    padding: 0 20px;
+    //}
 }
 
 ._fa:before {

@@ -1,21 +1,21 @@
 @use "../global" as *;
 
 .footer__contact {
-    display: grid;
-
-    grid-template-columns: 4fr 3fr;
+    display: flex;
+}
+.footer__contact-img {
+    width: 57.6388%;
 }
 
 .footer__contact-body {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 42.3612%;
     background-color: $navy;
     color: $white;
 }
-//.footer__contact-body-inner {
-//    width: 300px;
-//    height: 300px;
-//    margin: auto;
-//}
 .footer__contact-text {
     font-size: 18px;
     line-height: calc(30 / 18);
@@ -23,6 +23,7 @@
 
 .footer__contact-button {
     display: flex;
+    position: relative;
     width: 235px;
     height: 68px;
     padding: 26px 33px 21px 30px;
@@ -30,12 +31,17 @@
     border-radius: 4px;
     font-size: 22px;
     font-family: "Noto Sans JP";
+    white-space: nowrap;
 
     img {
         width: 22px;
         height: 22px;
     }
     p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         margin-left: 16px;
     }
 }
@@ -53,4 +59,54 @@
 }
 .footer__contact-button:not(:first-child) {
     margin-top: 20px;
+}
+
+.footer__main {
+    display: flex;
+    background-color: $navy;
+}
+
+.footer__main-body {
+    width: 79.167%;
+    margin-top: 100px;
+    margin-bottom: 63px;
+    margin-left: 170px;
+}
+
+.footer__links {
+    width: 20.833%;
+}
+
+.footer__logos {
+    display: flex;
+}
+.footer__logo {
+    width: 258px;
+}
+
+.footer__sns-icons {
+    display: flex;
+    margin-left: 46px;
+}
+
+.footer__sns-icon:not(:first-child) {
+    margin-left: 20px;
+}
+.footer__copyright {
+    margin-top: 25px;
+    color: $white;
+    font-size: 12px;
+}
+
+.footer-links {
+    margin-top: 57px;
+    margin-bottom: 58px;
+}
+.footer-link:not(:first-child) {
+    margin-top: 20px;
+}
+
+.footer-link__link {
+    color: $white;
+    text-transform: uppercase;
 }
