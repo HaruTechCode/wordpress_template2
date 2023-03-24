@@ -15,11 +15,11 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <header class="header">
-      <div class="header__inner">
+      <div class="header__inner md-none">
         <div class="header__logo">
           <img src="<?php echo esc_url(get_theme_file_uri("/images/main_logo_gray.png")) ?>" alt="" class="header__logo-img">
         </div>
-        <ul class="header__items">
+        <ul class="header__items md-none">
           <li class="header__item">
             <a href="" class="header__link">top</a>
           </li>
@@ -42,5 +42,40 @@
             </a>
           </li>
         </ul>
+      </div>
+      <div class="header-logo-sp md-show">
+        <img src="<?php echo esc_url(get_theme_file_uri("/images/main_logo_gray.png")) ?>" alt="">
+      </div>
+      <div class="hamburger js-hamburger md-show">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <div class="drawer-menu js-drawer">
+        <div class="drawer-menu__inner">
+          <ul class="drawer-menu__items">
+            <li class="drawer-menu__item">
+              <a href="" class="drawer-menu__link" >top</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="" class="drawer-menu__link" >about</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="" class="drawer-menu__link" >service</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="" class="drawer-menu__link" >works</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="" class="drawer-menu__link" >news</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="" class="drawer-menu__link" >contact</a>
+            </li>
+            <li class="drawer-menu__item">
+              <a href="" class="drawer-menu__link" >プライバシーポリシー</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>

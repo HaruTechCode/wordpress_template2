@@ -140,17 +140,3 @@
 .tag.tag--white {
     background-color: $white;
 }
-
-.md-none {
-    @include mq("md") {
-        display: none;
-    }
-}
-
-.md-show {
-    display: none;
-
-    @include mq("md") {
-        display: block;
-    }
-}

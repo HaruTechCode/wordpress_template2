@@ -14,9 +14,11 @@ $fv_text_margin: 45px;
     height: inherit;
     padding: 0 80px;
 
+    -moz-column-gap: $fv_column_gap;
     column-gap: $fv_column_gap;
     @include mq("md") {
-        padding: 0;
+        display: block;
+        padding: 0 10px;
     }
 }
 
@@ -26,6 +28,7 @@ $fv_text_margin: 45px;
 
     @include mq("md") {
         width: 100%;
+        //height: calc(100vh - 165px);
     }
 }
 
@@ -34,6 +37,9 @@ $fv_text_margin: 45px;
 
     -o-object-fit: cover;
     object-fit: cover;
+    @include mq("md") {
+        height: calc(100vh - 175px);
+    }
 }
 
 .fv__text-container {
@@ -41,12 +47,18 @@ $fv_text_margin: 45px;
     align-items: center;
 
     @include mq("md") {
-        display: none;
+        display: block;
+        margin-top: 30px;
+        margin-left: 10px;
     }
 }
 .fv__text-wrapper {
     display: flex;
     flex-direction: row-reverse;
+
+    @include mq("md") {
+        display: block;
+    }
 }
 
 .fv__text {
@@ -58,10 +70,22 @@ $fv_text_margin: 45px;
     -ms-writing-mode: tb-rl;
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
+    @include mq("md") {
+        -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+        writing-mode: horizontal-tb;
+    }
 }
 
 .fv__text:nth-child(1) {
     margin-left: $fv_text_margin;
+
+    @include mq("md") {
+        margin-left: 0;
+    }
+}
+.fv__text:nth-child(2) {
+    margin-top: 15px;
 }
 
 //flowing-box
@@ -131,7 +155,7 @@ $fv_text_margin: 45px;
 .top-service__cards {
     display: grid;
 
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     -moz-column-gap: 48px;
     column-gap: 48px;
     //レスポンシブにするとき
@@ -202,6 +226,7 @@ $fv_text_margin: 45px;
 .top-works__article-img {
     width: 290px;
 
+    -o-object-fit: contain;
     object-fit: contain;
 }
 

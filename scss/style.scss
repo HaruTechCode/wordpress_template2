@@ -4,4 +4,5 @@
 @use "./module/header";
 @use "./module/footer";
 @use "./page/front_page";
+@use "./module/responsive_display";
 @use "./global" as *;
