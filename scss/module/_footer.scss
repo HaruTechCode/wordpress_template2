@@ -2,13 +2,24 @@
 
 .footer__contact {
     display: flex;
+
+    @include mq("md") {
+        flex-direction: column-reverse;
+    }
 }
 .footer__contact-img {
     width: 57.6388%;
-    img {
-        height: 100%;
 
-        object-fit: cover;
+    @include mq("md") {
+        width: 100%;
+    }
+}
+.footer__contact-img img {
+    height: 100%;
+
+    object-fit: cover;
+    @include mq("md") {
+        height: 240px;
     }
 }
 
@@ -21,6 +32,12 @@
     padding: 20px;
     background-color: $navy;
     color: $white;
+
+    @include mq("md") {
+        width: 100%;
+        padding-top: 84px;
+        padding-bottom: 80px;
+    }
 }
 .footer__contact-text {
     font-size: 18px;
@@ -72,6 +89,10 @@
 .footer__main {
     display: flex;
     background-color: $dark_navy2;
+
+    @include mq("md") {
+        flex-direction: column-reverse;
+    }
 }
 
 .footer__main-body {
@@ -79,22 +100,49 @@
     margin-top: 100px;
     margin-bottom: 63px;
     padding-left: 15%;
+
+    @include mq("md") {
+        width: 100%;
+        margin: 0;
+        padding: 0 40px 30px;
+    }
 }
 
 .footer__links {
     width: 20.833%;
+
+    @include mq("md") {
+        width: 100%;
+        padding-left: 50px;
+    }
 }
 
 .footer__logos {
     display: flex;
+
+    @include mq("md") {
+        display: block;
+    }
 }
 .footer__logo {
     width: 258px;
+
+    @include mq("md") {
+        width: 115px;
+    }
 }
 
 .footer__sns-icons {
     display: flex;
     margin-left: 46px;
+
+    @include mq("md") {
+        margin-top: 50px;
+        margin-left: 0;
+    }
+}
+.footer__sns-icon {
+    width: 22px;
 }
 
 .footer__sns-icon:not(:first-child) {
@@ -105,6 +153,10 @@
     margin-top: 25px;
     color: $white;
     font-size: 12px;
+
+    @include mq("md") {
+        margin-top: 50px;
+    }
 }
 
 .footer-links {

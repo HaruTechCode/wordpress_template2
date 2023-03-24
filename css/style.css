@@ -451,13 +451,29 @@ select::-ms-expand {
 .footer__contact {
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .footer__contact {
+    flex-direction: column-reverse;
+  }
+}
 
 .footer__contact-img {
   width: 57.6388%;
 }
+@media screen and (max-width: 768px) {
+  .footer__contact-img {
+    width: 100%;
+  }
+}
+
 .footer__contact-img img {
   height: 100%;
   object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .footer__contact-img img {
+    height: 240px;
+  }
 }
 
 .footer__contact-body {
@@ -469,6 +485,13 @@ select::-ms-expand {
   padding: 20px;
   background-color: #011950;
   color: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  .footer__contact-body {
+    width: 100%;
+    padding-top: 84px;
+    padding-bottom: 80px;
+  }
 }
 
 .footer__contact-text {
@@ -523,6 +546,11 @@ select::-ms-expand {
   display: flex;
   background-color: #001135;
 }
+@media screen and (max-width: 768px) {
+  .footer__main {
+    flex-direction: column-reverse;
+  }
+}
 
 .footer__main-body {
   width: 79.167%;
@@ -530,22 +558,55 @@ select::-ms-expand {
   margin-bottom: 63px;
   padding-left: 15%;
 }
+@media screen and (max-width: 768px) {
+  .footer__main-body {
+    width: 100%;
+    margin: 0;
+    padding: 0 40px 30px;
+  }
+}
 
 .footer__links {
   width: 20.833%;
+}
+@media screen and (max-width: 768px) {
+  .footer__links {
+    width: 100%;
+    padding-left: 50px;
+  }
 }
 
 .footer__logos {
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .footer__logos {
+    display: block;
+  }
+}
 
 .footer__logo {
   width: 258px;
+}
+@media screen and (max-width: 768px) {
+  .footer__logo {
+    width: 115px;
+  }
 }
 
 .footer__sns-icons {
   display: flex;
   margin-left: 46px;
+}
+@media screen and (max-width: 768px) {
+  .footer__sns-icons {
+    margin-top: 50px;
+    margin-left: 0;
+  }
+}
+
+.footer__sns-icon {
+  width: 22px;
 }
 
 .footer__sns-icon:not(:first-child) {
@@ -557,6 +618,11 @@ select::-ms-expand {
   margin-top: 25px;
   color: #ffffff;
   font-size: 12px;
+}
+@media screen and (max-width: 768px) {
+  .footer__copyright {
+    margin-top: 50px;
+  }
 }
 
 .footer-links {
