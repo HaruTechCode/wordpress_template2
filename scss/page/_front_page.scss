@@ -326,11 +326,6 @@ $fv_text_margin: 45px;
 
 .top-news__tag-list-item {
     color: $gray4;
-
-    @include mq("md") {
-        display: inline-block;
-        white-space: nowrap;
-    }
 }
 
 .top-news__tag-list-item:not(:first-child) {
@@ -358,6 +353,7 @@ $fv_text_margin: 45px;
 
 .top-news__link-container {
     display: flex;
+    margin-top: 34px;
 }
 
 .top-news__link {

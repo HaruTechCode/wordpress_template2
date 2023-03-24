@@ -912,12 +912,6 @@ select::-ms-expand {
 .top-news__tag-list-item {
   color: #e2e2e2;
 }
-@media screen and (max-width: 768px) {
-  .top-news__tag-list-item {
-    display: inline-block;
-    white-space: nowrap;
-  }
-}
 
 .top-news__tag-list-item:not(:first-child) {
   margin-top: 26px;
@@ -946,6 +940,7 @@ select::-ms-expand {
 
 .top-news__link-container {
   display: flex;
+  margin-top: 34px;
 }
 
 .top-news__link {
