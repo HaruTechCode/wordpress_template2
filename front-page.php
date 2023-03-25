@@ -95,7 +95,7 @@
             <div class="top-works__article-body">
               <div class="top-works__article-category tag">修理・整備</div>
               <div class="top-works__article-title"><span class="top-works__underline">車のドアが開けられなくなった｜ドアロックの交換と...</span></div>
-              <div class="top-works__article-text">弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...</div>
+              <div class="top-works__article-text md-none">弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...</div>
               <time class="top-works__date date" datetime="2022-09-02">2022.09.02</time>
             </div>
           </li>
@@ -104,7 +104,7 @@
             <div class="top-works__article-body">
               <div class="top-works__article-category tag">修理・整備</div>
               <div class="top-works__article-title"><span class="top-works__underline">車のドアが開けられなくなった｜ドアロックの交換と...</span></div>
-              <div class="top-works__article-text">弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...</div>
+              <div class="top-works__article-text md-none">弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...</div>
               <time class="top-works__date date" datetime="2022-09-02">2022.09.02</time>
             </div>
           </li>
