@@ -81,6 +81,7 @@
       </ul>
     </div>
   </section>
+
   <!-- TODO 画像名統一。ワードプレスから引っ張ってくるならしなくていいから後回しでいいけど。 -->
   <section class="top-works">
     <div class="top-works__inner inner">
@@ -93,7 +94,7 @@
             <img src="<?php echo esc_url(get_theme_file_uri("/images/top_works1.jpg")) ?>" alt="" class="top-works__article-img">
             <div class="top-works__article-body">
               <div class="top-works__article-category tag">修理・整備</div>
-              <div class="top-works__article-title">車のドアが開けられなくなった｜ドアロックの交換と...</div>
+              <div class="top-works__article-title"><span class="top-works__underline">車のドアが開けられなくなった｜ドアロックの交換と...</span></div>
               <div class="top-works__article-text">弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...</div>
               <time class="top-works__date date" datetime="2022-09-02">2022.09.02</time>
             </div>
@@ -102,7 +103,7 @@
             <img src="<?php echo esc_url(get_theme_file_uri("/images/top_works1.jpg")) ?>" alt="" class="top-works__article-img">
             <div class="top-works__article-body">
               <div class="top-works__article-category tag">修理・整備</div>
-              <div class="top-works__article-title">車のドアが開けられなくなった｜ドアロックの交換と...</div>
+              <div class="top-works__article-title"><span class="top-works__underline">車のドアが開けられなくなった｜ドアロックの交換と...</span></div>
               <div class="top-works__article-text">弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく...</div>
               <time class="top-works__date date" datetime="2022-09-02">2022.09.02</time>
             </div>
