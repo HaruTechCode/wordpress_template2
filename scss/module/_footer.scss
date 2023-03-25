@@ -46,28 +46,26 @@
 
 .footer__contact-button {
     display: flex;
+    align-items: center;
     position: relative;
     width: 235px;
-    height: 68px;
     padding: 26px 33px 21px 30px;
     border: 1px solid $white;
     border-radius: 4px;
     font-size: 22px;
     font-family: "Noto Sans JP";
     white-space: nowrap;
+}
 
-    img {
-        position: relative;
-        top: -3px;
-        width: 22px;
-        height: 22px;
-    }
-    p {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin-left: 16px;
+.footer__contact-button img {
+    width: 22px;
+    height: 22px;
+}
+.footer__contact-button p {
+    margin-left: 16px;
+
+    @include mq("md") {
+        margin-left: 10px;
     }
 }
 
