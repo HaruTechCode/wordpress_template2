@@ -76,21 +76,15 @@
               <a href="" class="drawer-menu__link" >プライバシーポリシー</a>
             </li>
           </ul>
-          <div class="drawer-menu__sns">
-            <a href="" class="drawer-menu__sns-link">
-              <div class="drawer-menu__sns-img">
-                <img src="<?php echo esc_url(get_theme_file_uri("/images/facebook_icon.svg")) ?>" alt="" class="">
-              </div>
+          <div class="drawer-menu__sns sns-links">
+            <a href="" class="sns-links__item sns-link">
+              <img src="<?php echo esc_url(get_theme_file_uri("/images/facebook_icon.svg")) ?>" alt="" class="">
             </a>
-            <a href="" class="drawer-menu__sns-link drawer-menu__sns-link--twitter">
-              <div class="drawer-menu__sns-img">
-                <img src="<?php echo esc_url(get_theme_file_uri("/images/twitter_icon.svg")) ?>" alt="" class="">
-              </div>
+            <a href="" class="sns-links__item sns-link sns-link--twitter">
+              <img src="<?php echo esc_url(get_theme_file_uri("/images/twitter_icon.svg")) ?>" alt="" class="">
             </a>
-            <a href="" class="drawer-menu__sns-link">
-              <div class="drawer-menu__sns-img">
-                <img src="<?php echo esc_url(get_theme_file_uri("/images/instagram_icon.svg")) ?>" alt="" class="">
-              </div>
+            <a href="" class="sns-links__item sns-link">
+              <img src="<?php echo esc_url(get_theme_file_uri("/images/instagram_icon.svg")) ?>" alt="" class="">
             </a>
           </div>
         </div>

@@ -144,3 +144,20 @@
 .tag.tag--white {
     background-color: $white;
 }
+
+.sns-links {
+    display: flex;
+}
+
+.sns-link {
+    width: 22px;
+}
+
+.sns-link:not(:first-child) {
+    margin-left: 20px;
+}
+
+.sns-link.sns-link--twitter {
+    position: relative;
+    top: 2px;
+}

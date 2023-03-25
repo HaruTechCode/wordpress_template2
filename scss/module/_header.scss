@@ -137,17 +137,5 @@
 }
 
 .drawer-menu__sns {
-    display: flex;
     margin-top: 50px;
-}
-
-.drawer-menu__sns-link:not(:first-child) {
-    margin-left: 20px;
-}
-.drawer-menu__sns-link.drawer-menu__sns-link--twitter {
-    position: relative;
-    top: 2px;
-}
-.drawer-menu__sns-img {
-    width: 22px;
 }
