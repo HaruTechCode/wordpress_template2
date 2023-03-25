@@ -85,7 +85,6 @@
   <!-- TODO 画像名統一。ワードプレスから引っ張ってくるならしなくていいから後回しでいいけど。 -->
   <section class="top-works">
     <div class="top-works__inner inner">
-      <!-- TODO inview使って左からフェードイン -->
       <h2 class="top-works__heading large-heading js-inview left-fade-in">Works</h2>
       <!-- TODO パーシャル使ったり、他との共通点を探したり、ワードプレスのデータを入れたり -->
       <div class="top-works__articles-wrapper">
