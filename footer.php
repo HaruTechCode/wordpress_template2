@@ -5,10 +5,8 @@
         </div>
         <div class="footer__contact-body">
             <p class="footer__contact-text">輸入車の購入や修理のご相談など<br>お気軽にお問い合わせください。</p>
-            <!-- クリックできるようにすべきか お問い合わせボタンはホバーすると、色を反転 -->
             <a class="footer__contact-button background-flow-left">
                 <span>
-                    <!-- <img src="<?php echo esc_url(get_theme_file_uri("/images/mail-icon.svg")) ?>" alt="" class="footer__contact-mail-icon"> -->
                     <i class="fa-solid fa-envelope _fa"></i>
                     <p class="footer__contact-button-text">お問い合わせ</p>
                 </span>
