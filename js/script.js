@@ -1,4 +1,14 @@
 $(function () {
+    const headerHeight = $(".js-header").height();
+    $('a[href^="#"]').click(function () {
+        const speed = 600;
+        let href = $(this).attr("href");
+        let target = $(href == "#" || href == "" ? "html" : href);
+        let position = target.offset().top - headerHeight;
+        $("body,html").animate({ scrollTop: position }, speed, "swing");
+        return false;
+    });
+
     $(".js-hamburger, .js-drawer, .js-drawer a").click(function () {
         $(".js-hamburger").toggleClass("is-active");
         $(".js-drawer").fadeToggle();

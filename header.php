@@ -14,7 +14,7 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <header class="header">
+    <header class="header js-header">
       <div class="header__inner">
         <div class="header__logo">
           <img src="<?php echo esc_url(get_theme_file_uri("/images/main_logo_gray.png")) ?>" alt="" class="header__logo-img">

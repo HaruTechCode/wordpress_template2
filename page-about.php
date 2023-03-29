@@ -9,19 +9,11 @@
             <img src="<?php echo esc_url(get_theme_file_uri("/images/about_fv.jpg")) ?>" alt="" class="page-fv__img">
         </div>
     </section>
-    <?php if (!is_front_page()) { ?>
-        <?php if (function_exists('bcn_display')) { ?>
-            <div class="breadcrumb-wrapper">
-                <div id="breadcrumb" class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
-                    <?php bcn_display(); ?>
-                </div>
-            </div>
-        <?php } ?>
-    <?php } ?>
+    <?php get_template_part("breadcrumb"); ?>
     <div class="page-nav-links">
-        <a href="" class="page-nav-link">経営理念</a>
-        <a href="" class="page-nav-link">アクセス</a>
-        <a href="" class="page-nav-link">会社概要</a>
+        <a href="#about-philosophy" class="page-nav-link">経営理念</a>
+        <a href="#about-access" class="page-nav-link">アクセス</a>
+        <a href="#about-company-profile" class="page-nav-link">会社概要</a>
     </div>
     <div class="page-top">
         <div class="page-top__inner">
@@ -30,7 +22,7 @@
         </div>
     </div>
 
-    <section class="about-philosophy">
+    <section class="about-philosophy" id="about-philosophy">
         <div class="about-philosophy__inner inner">
             <div class="about-philosophy__body">
                 <h2 class="about-philosophy__heading page-section-heading">
@@ -48,7 +40,7 @@
             </div>
         </div>
     </section>
-    <section class="about-access">
+    <section class="about-access" id="about-access">
         <div class="about-access__inner inner">
             <h2 class="about-access__heading page-section-heading">
                 <span class="page-section-heading__sub">アクセス</span>
@@ -63,7 +55,7 @@
             </div>
         </div>
     </section>
-    <section class="about-company-profile">
+    <section class="about-company-profile" id="about-company-profile">
         <div class="about-company-profile__inner inner">
             <h2 class="about-company-profile__heading page-section-heading">
                 <span class="page-section-heading__sub">会社概要</span>
