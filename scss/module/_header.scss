@@ -49,8 +49,13 @@
     margin-left: 10px;
 }
 
-.header-logo-sp {
-    width: 32.315492%;
+.header__logo {
+    height: 180px;
+
+    aspect-ratio: 257.87/180;
+    @include mq("md") {
+        height: inherit;
+    }
 }
 
 .hamburger {

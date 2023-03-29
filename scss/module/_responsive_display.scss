@@ -13,3 +13,17 @@
         display: block;
     }
 }
+
+.lg-none {
+    @include mq("lg") {
+        display: none;
+    }
+}
+
+.lg-show {
+    display: none;
+
+    @include mq("lg") {
+        display: block;
+    }
+}

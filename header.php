@@ -15,11 +15,11 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <header class="header">
-      <div class="header__inner md-none">
+      <div class="header__inner">
         <div class="header__logo">
           <img src="<?php echo esc_url(get_theme_file_uri("/images/main_logo_gray.png")) ?>" alt="" class="header__logo-img">
         </div>
-        <ul class="header__items md-none">
+        <ul class="header__items lg-none">
           <li class="header__item">
             <a href="" class="header__link">top</a>
           </li>
@@ -43,10 +43,10 @@
           </li>
         </ul>
       </div>
-      <div class="header-logo-sp md-show">
+      <!-- <div class="header-logo-sp md-show">
         <img src="<?php echo esc_url(get_theme_file_uri("/images/main_logo_gray.png")) ?>" alt="">
-      </div>
-      <div class="hamburger js-hamburger md-show">
+      </div> -->
+      <div class="hamburger js-hamburger lg-show">
           <span></span>
           <span></span>
           <span></span>
