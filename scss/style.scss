@@ -4,6 +4,8 @@
 @use "./module/header";
 @use "./module/footer";
 @use "./module/about";
+@use "./module/service";
 @use "./page/front_page";
+@use "./page/archive";
 @use "./module/responsive_display";
 @use "./global" as *;

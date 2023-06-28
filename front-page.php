@@ -87,6 +87,35 @@
     <div class="top-works__inner inner">
       <h2 class="top-works__heading large-heading js-inview left-fade-in">Works</h2>
       <!-- TODO パーシャル使ったり、他との共通点を探したり、ワードプレスのデータを入れたり -->
+      <?php
+      $args = [
+        'post_type' => 'works',
+        'posts_per_page' => 3
+      ];
+      $the_query = new WP_Query($args);
+      ?>
+      <?php if($the_query->have_posts()): ?>
+          <ul>
+              <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                  <li>
+                      <?php if (has_post_thumbnail()): ?>
+                          <?php the_post_thumbnail( 'thumbnail', ['class' => 'archive-works__img']); ?>
+                      <?php endif; ?>
+                      <?php
+                      $terms = get_the_terms($post->ID, 'works_category');
+                      foreach ($terms as $term) {
+                          echo '<a href="' . get_term_link($term) . '">' . $term->name . '</a>';
+                      }
+                      ?>
+                      <a href="<?php the_permalink(); ?>">
+                          <div class="ttl"><?php the_title(); ?></div>
+                      </a>
+                      <div class="date"><?php echo get_the_date('Y.m.d') ?></div>
+                  </li>
+              <?php endwhile; ?>
+          </ul>
+      <?php endif; ?>
+
       <div class="top-works__articles-wrapper">
         <ul class="top-works__articles">
           <li class="top-works__article top-fade-in js-inview">
