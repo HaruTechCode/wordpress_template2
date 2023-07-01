@@ -87,6 +87,7 @@
     <div class="top-works__inner inner">
       <h2 class="top-works__heading large-heading js-inview left-fade-in">Works</h2>
       <!-- TODO パーシャル使ったり、他との共通点を探したり、ワードプレスのデータを入れたり -->
+
       <?php
       $args = [
         'post_type' => 'works',
@@ -95,27 +96,33 @@
       $the_query = new WP_Query($args);
       ?>
       <?php if($the_query->have_posts()): ?>
-          <ul>
-              <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                  <li>
-                      <?php if (has_post_thumbnail()): ?>
-                          <?php the_post_thumbnail( 'thumbnail', ['class' => 'archive-works__img']); ?>
-                      <?php endif; ?>
-                      <?php
-                      $terms = get_the_terms($post->ID, 'works_category');
-                      foreach ($terms as $term) {
-                          echo '<a href="' . get_term_link($term) . '">' . $term->name . '</a>';
-                      }
-                      ?>
-                      <a href="<?php the_permalink(); ?>">
-                          <div class="ttl"><?php the_title(); ?></div>
-                      </a>
-                      <div class="date"><?php echo get_the_date('Y.m.d') ?></div>
-                  </li>
-              <?php endwhile; ?>
-          </ul>
+          <div class="top-works__articles-wrapper">
+              <ul class="top-works__articles">
+                  <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                      <li class="top-works__article top-fade-in js-inview">
+                          <?php if (has_post_thumbnail()): ?>
+                              <?php the_post_thumbnail( 'medium', ['class' => 'top-works__article-img']); ?>
+                          <?php endif; ?>
+                          <div class="top-works__article-body">
+                              <?php
+                              $terms = get_the_terms($post->ID, 'works_category');
+                              foreach ($terms as $term) {
+                                  echo '<div class="top-works__article-category tag"><a href="' . get_term_link($term) . '">' . $term->name . '</a></div>';
+                              }
+                              ?>
+                              <a href="<?php the_permalink(); ?>">
+                                  <div class="top-works__article-title"><span class="top-works__underline"><?php the_title(); ?></span></div>
+                              </a>
+                              <div class="top-works__article-text md-none"><?php echo mb_substr(strip_tags(get_the_content()), 0, 82) . '...'; ?></div>
+                              <div class="top-works__date date"><?php echo get_the_date('Y.m.d') ?></div>
+                          </div>
+                      </li>
+                  <?php endwhile; ?>
+             </ul>
+          </div>
       <?php endif; ?>
 
+      <!--
       <div class="top-works__articles-wrapper">
         <ul class="top-works__articles">
           <li class="top-works__article top-fade-in js-inview">
@@ -138,11 +145,12 @@
           </li>
         </ul>
         <div class="top-works__link-container">
-          <a href="" class="top-works__link animation-link">read more</a>
+          <a href="<?php echo home_url('works'); ?>" class="top-works__link animation-link">read more</a>
         </div>
       </div>
     </div>
   </section>
+  -->
   <section class="top-news">
     <div class="top-news__inner inner">
       <div class="top-news__side">
