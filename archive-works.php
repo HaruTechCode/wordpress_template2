@@ -18,7 +18,6 @@
             foreach ( $terms as $term ) {
                 $term_link = get_term_link( $term );
                 echo '<a href="' . esc_url( $term_link ) . '">' . $term->name . '</a>';
-                //echo '<li>' . esc_html($term->name) . '</li>';
             }
             ?>
         </ul>
@@ -26,21 +25,13 @@
     <main>
         <?php get_template_part('searchform-works'); ?>
         <section class = "archive-works">
+            <p>ピックアップ記事</p>
             <?php
                 $args = array(
                     'post_type' => 'works',
                     'meta_key' => 'published',
                     'meta_value' => 1
                 );
-                // $args = array(
-                    // 'post_type' => 'works',
-                    // 'meta_query' => array(
-                        // 'key' => 'published',
-                        // 'value' => 1,
-                        // 'compare' => '=',
-                    // )
-                // );
-
                 $the_query = new WP_Query($args);
             ?>
             <?php if ($the_query->have_posts()) : ?>
@@ -65,6 +56,7 @@
                 </ul>
                 <?php wp_reset_postdata(); ?>
             <?php endif; ?>
+            <p>ピックアップ記事↑ここまで</p>
         </section>
         <section class = "archive-works">
             <?php if (have_posts()) : ?>

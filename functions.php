@@ -54,6 +54,8 @@ function custom_search($search, $wp_query) {
         return $search;
 
     $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
+    $field_types = $_GET['field_type'];
+    $field_type_text = isset($field_types) ? "('" . implode("' , '", $field_types) . "')" : "(null)";
     if ( count($search_words) > 0 ) {
         $search = '';
         $search .= "AND post_type = 'works'";
@@ -66,7 +68,8 @@ function custom_search($search, $wp_query) {
                     OR {$wpdb->posts}.ID IN (
                     SELECT distinct post_id
                     FROM {$wpdb->postmeta}
-                    WHERE meta_value LIKE '{$search_word}'
+                    WHERE meta_value LIKE '{$search_word}' AND
+                    meta_key IN {$field_type_text}
                     )
                 ) ";
             }
