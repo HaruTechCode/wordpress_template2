@@ -55,6 +55,7 @@ function custom_search($search, $wp_query) {
 
     $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
     $field_types = $_GET['field_type'];
+    $field_types = array_map('esc_sql', $field_types);
     $field_type_text = isset($field_types) ? "('" . implode("' , '", $field_types) . "')" : "(null)";
     if ( count($search_words) > 0 ) {
         $search = '';
