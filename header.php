@@ -21,13 +21,13 @@
         </div>
         <ul class="header__items lg-none">
           <li class="header__item">
-            <a href="" class="header__link">top</a>
+            <a href="<?php echo esc_url(home_url()); ?>" class="header__link">top</a>
           </li>
           <li class="header__item">
-            <a href="" class="header__link">about</a>
+            <a href="<?php echo esc_url(home_url('about')); ?>" class="header__link">about</a>
           </li>
           <li class="header__item">
-            <a href="" class="header__link">service</a>
+            <a href="<?php echo esc_url(home_url('service')); ?>" class="header__link">service</a>
           </li>
           <li class="header__item">
             <a href="" class="header__link">works</a>

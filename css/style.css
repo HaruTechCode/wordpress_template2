@@ -1143,6 +1143,27 @@ select::-ms-expand {
   appearance: auto;
 }
 
+.visible-radio[type=radio] {
+  display: inline;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+}
+
+.visible-checkbox input {
+  display: inline;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+}
+
+.visible-radio input {
+  display: inline;
+  -webkit-appearance: auto;
+  -moz-appearance: auto;
+  appearance: auto;
+}
+
 .fv {
   width: 100%;
   height: 100vh;
@@ -1572,6 +1593,152 @@ select::-ms-expand {
   margin-top: 31px;
 }
 
+/******************************/
+/** コンタクトフォームの装飾 **/
+/******************************/
+/*　フォーム全体　*/
+#cf7-area {
+  width: 100%;
+  margin: 0 auto;
+  font-family: “遊ゴシック”, ”ヒラギノ角ゴ”, ”メイリオ”, ”MS Pゴシック”, sans-serif;
+}
+
+.cf7-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0 0 1.75em;
+}
+
+.cf7-q {
+  width: 30%;
+  margin: 0 0 0 10px;
+}
+
+.cf7-a {
+  width: 60%;
+}
+
+/*　見出し　*/
+.form-heading {
+  width: 100%;
+  margin: 0 0 2em;
+  padding: 1em 0.8em;
+  border-left: 1em solid #6495ed;
+  border-radius: 2px;
+  background-color: #191970;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.form-heading p {
+  margin: 0;
+}
+
+/* 各項目共通 */
+#cf7-area label {
+  font-weight: bold;
+}
+
+#cf7-area input[type=”text”],
+#cf7-area input[type=”email”],
+#cf7-area input[type=”tel”],
+#cf7-area textarea {
+  width: 500px;
+  margin-left: 10px;
+  background: #f0f8ff;
+}
+
+#cf7-area input[type=”text”]:focus,
+#cf7-area input[type=”email”]:focus,
+#cf7-area input[type=”tel”]:focus,
+#cf7-area textarea:focus {
+  border: 2px solid #ff1493;
+  background: #ffe4e1;
+  outline: 0;
+}
+
+#cf7-area input[type=”checkbox”],
+#cf7-area input[type=”radio”] {
+  appearance: auto;
+}
+
+#cf7-area .wpcf7-list-item {
+  display: block;
+}
+
+#cf7-area textarea {
+  height: 200px;
+  padding: 0.625em 0.4375em;
+}
+
+.cf7-accept-check {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.cf7-submit {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#cf7-area input[type=”submit”] {
+  width: 100%;
+  padding: 1em 10px;
+  border-radius: 5px;
+  background-color: #191970;
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+#cf7-area input[type=”submit”]:hover {
+  border: 2px solid #191970;
+  background-color: #ffffff;
+  color: #191970;
+}
+
+.cf7-btn {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*　必須ラベル　*/
+.cf7-req {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 4px 6px;
+  background: #eb2a2a;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 768px) {
+  .cf7-item {
+    display: block;
+  }
+  #cf7-area label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .cf7-q {
+    width: 100%;
+    margin: 0;
+  }
+  .cf7-a {
+    width: 100%;
+  }
+  #cf7-area input[type=”text”],
+  #cf7-area input[type=”email”],
+  #cf7-area input[type=”tel”],
+  #cf7-area textarea {
+    margin-left: 0;
+  }
+  .cf7-submit {
+    width: 90%;
+  }
+}
 .archive-works__img {
   width: 150px;
   height: 150px;

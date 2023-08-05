@@ -82,12 +82,17 @@
             <?php endif; ?>
         </section>
         <?php
-        $args = array(
-            'mid_size' => 2,
-            'prev_text' => '前',
-            'next_text' => '後',
-            'screen_reader_text' => 'ページャー'
-        );
+        // $args = array(
+        //     'mid_size' => 2,
+        //     'prev_text' => '前',
+        //     'next_text' => '後',
+        //     'screen_reader_text' => 'ページャー'
+        // );
+          $args = array(
+            'mid_size'   => 1,
+            'prev_text'  => '<span class="pagination__prev"></span>',
+            'next_text'  => '<span class="pagination__next"></span>',
+          );
         the_posts_pagination($args);
         ?>
     </main>

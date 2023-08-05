@@ -106,8 +106,10 @@
                           <div class="top-works__article-body">
                               <?php
                               $terms = get_the_terms($post->ID, 'works_category');
-                              foreach ($terms as $term) {
-                                  echo '<div class="top-works__article-category tag"><a href="' . get_term_link($term) . '">' . $term->name . '</a></div>';
+                              if($terms) {
+                                foreach ($terms as $term) {
+                                    echo '<div class="top-works__article-category tag"><a href="' . get_term_link($term) . '">' . $term->name . '</a></div>';
+                                }
                               }
                               ?>
                               <a href="<?php the_permalink(); ?>">

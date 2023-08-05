@@ -5,3 +5,27 @@
     -moz-appearance: auto;
     appearance: auto;
 }
+
+.visible-radio[type="radio"] {
+    display: inline;
+
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+}
+
+.visible-checkbox input {
+    display: inline;
+
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+}
+
+.visible-radio input {
+    display: inline;
+
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+}

@@ -1,0 +1,14 @@
+// ページネーションの要素を横並びにする
+.nav-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    margin-top: 59px;
+
+    gap: 13px;
+    @include mq("md") {
+        justify-content: center;
+        margin-top: 39px;
+    }
+}
