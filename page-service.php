@@ -31,6 +31,16 @@
             <div class="service__img">
                 <img src="<?php echo esc_url(get_theme_file_uri("/images/service1.jpg")) ?>" alt="" class="">
             </div>
+            <!--
+            <div class="service__feature feature">
+                <h3 class="feature__title feature-title"><span class="feature-title__main">features</span><span class="feature-title__sub">特徴</span></h3>
+                <div class="feature__text">
+                    <p>弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。
+</p>
+                    <p>これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく、オーナー様となる方がクルマから直接感じるリアルな感性を第一にした、最良の一台との出会いをコーディネートいたします。</p>
+                </div>
+            </div>
+            -->
         </div>
     </section>
 

@@ -30,13 +30,13 @@
             <a href="<?php echo esc_url(home_url('service')); ?>" class="header__link">service</a>
           </li>
           <li class="header__item">
-            <a href="" class="header__link">works</a>
+            <a href="<?php echo esc_url(home_url('works')); ?>" class="header__link">works</a>
           </li>
           <li class="header__item">
-            <a href="" class="header__link">news</a>
+            <a href="<?php echo esc_url(home_url('news')); ?>" class="header__link">news</a>
           </li>
           <li class="header__item">
-            <a href="" class="header__contact">
+            <a href="<?php echo esc_url(home_url('contact')); ?>" class="header__contact">
               <img src="<?php echo esc_url(get_theme_file_uri("/images/mail-icon.svg")) ?>" alt="" class="header__contact-mail-icon">
               <div class="header__contact-text">contact</div>
             </a>
@@ -55,22 +55,22 @@
         <div class="drawer-menu__inner">
           <ul class="drawer-menu__items">
             <li class="drawer-menu__item">
-              <a href="" class="drawer-menu__link" >top</a>
+              <a href="<?php echo esc_url(home_url()); ?>" class="drawer-menu__link" >top</a>
             </li>
             <li class="drawer-menu__item">
-              <a href="" class="drawer-menu__link" >about</a>
+              <a href="<?php echo esc_url(home_url('about')); ?>" class="drawer-menu__link" >about</a>
             </li>
             <li class="drawer-menu__item">
-              <a href="" class="drawer-menu__link" >service</a>
+              <a href="<?php echo esc_url(home_url('service')); ?>" class="drawer-menu__link" >service</a>
             </li>
             <li class="drawer-menu__item">
-              <a href="" class="drawer-menu__link" >works</a>
+              <a href="<?php echo esc_url(home_url('works')); ?>" class="drawer-menu__link" >works</a>
             </li>
             <li class="drawer-menu__item">
-              <a href="" class="drawer-menu__link" >news</a>
+              <a href="<?php echo esc_url(home_url('news')); ?>" class="drawer-menu__link" >news</a>
             </li>
             <li class="drawer-menu__item">
-              <a href="" class="drawer-menu__link" >contact</a>
+              <a href="<?php echo esc_url(home_url('contact')); ?>" class="drawer-menu__link" >contact</a>
             </li>
             <li class="drawer-menu__item">
               <a href="" class="drawer-menu__link" >プライバシーポリシー</a>

@@ -51,7 +51,7 @@
           </div>
           <div class="card__text">国を超え、メーカーを超え、高級の本質をお届けする特別な一台との出会いをサポートします。</div>
           <div class="card__link-wrapper">
-            <a class="card__link animation-link animation-link--button">read more</a>
+            <a href="<?php echo esc_url(home_url('service#service1')); ?>" class="card__link animation-link animation-link--button">read more</a>
           </div>
         </li>
         <li class="top-service__card card">

@@ -1,4 +1,8 @@
 $(function () {
+    // ヘッダーの高さ分だけコンテンツを下げる
+    const height = $(".js-header").height();
+    $("main").css("margin-top", height);
+
     const headerHeight = $(".js-header").height();
     $('a[href^="#"]').click(function () {
         const speed = 600;
