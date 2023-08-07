@@ -282,6 +282,9 @@ select::-ms-expand {
   color: #626262;
   font-size: 11px;
 }
+.tag a {
+  color: #626262;
+}
 
 .tag.tag--white {
   background-color: #ffffff;
@@ -1115,8 +1118,9 @@ select::-ms-expand {
 }
 
 .service__title-num {
-  color: #011950;
+  color: #001e63;
   font-size: 40px;
+  font-family: "Oswald";
 }
 
 .service__title-num::after {
@@ -1138,8 +1142,39 @@ select::-ms-expand {
   margin-top: 25px;
 }
 
+.feature {
+  padding-bottom: 150px;
+}
+
 .service__feature {
   margin-top: 30px;
+}
+
+.feature-title__main {
+  text-transform: uppercase;
+}
+
+.feature__inner {
+  padding-right: 11.8055555556vw;
+  padding-left: 11.8055555556vw;
+}
+
+.feature-title__main {
+  font-size: 22px;
+  line-height: 1.8181;
+  font-family: "Oswald";
+}
+
+.feature-title__sub {
+  margin-left: 16px;
+  color: #626262;
+  font-size: 12px;
+  line-height: 3.3333;
+}
+
+.feature__text {
+  font-size: 16px;
+  line-height: 2.375;
 }
 
 .visible-checkbox[type=checkbox] {
@@ -1526,6 +1561,9 @@ select::-ms-expand {
 .top-news__tag-list-item {
   color: #e2e2e2;
 }
+.top-news__tag-list-item a {
+  color: #e2e2e2;
+}
 
 .top-news__tag-list-item:not(:first-child) {
   margin-top: 26px;
@@ -1597,6 +1635,9 @@ select::-ms-expand {
 
 .top-news__article-title {
   margin-top: 31px;
+}
+.top-news__article-title a {
+  color: #000000;
 }
 
 /******************************/

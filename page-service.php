@@ -11,9 +11,9 @@
     </section>
     <?php get_template_part("breadcrumb"); ?>
     <div class="page-nav-links">
-        <a href="" class="page-nav-link">購入サポート</a>
-        <a href="" class="page-nav-link">修理・整備</a>
-        <a href="" class="page-nav-link">車検・点検</a>
+        <a href="#service1" class="page-nav-link">購入サポート</a>
+        <a href="#service2" class="page-nav-link">修理・整備</a>
+        <a href="#service3" class="page-nav-link">車検・点検</a>
     </div>
     <div class="page-top">
         <div class="page-top__inner">
@@ -31,16 +31,60 @@
             <div class="service__img">
                 <img src="<?php echo esc_url(get_theme_file_uri("/images/service1.jpg")) ?>" alt="" class="">
             </div>
-            <!--
-            <div class="service__feature feature">
+        </div>
+        <div class="service__feature feature">
+            <div class="feature__inner">
                 <h3 class="feature__title feature-title"><span class="feature-title__main">features</span><span class="feature-title__sub">特徴</span></h3>
                 <div class="feature__text">
                     <p>弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。
-</p>
+    </p>
                     <p>これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく、オーナー様となる方がクルマから直接感じるリアルな感性を第一にした、最良の一台との出会いをコーディネートいたします。</p>
                 </div>
             </div>
-            -->
+        </div>
+    </section>
+    <section class="service" id="service2">
+        <div class="service__inner">
+            <div class="service__body">
+                <div class="service__title-num">02</div>
+                <h2 class="service__title-text">修理・整備</h2>
+                <p class="service__text">高度な輸入車修理技術と数多くの修理実績、熟練の技術・設備であなたの愛車を完全に直します。</p>
+            </div>
+            <div class="service__img">
+                <img src="<?php echo esc_url(get_theme_file_uri("/images/service2.jpg")) ?>" alt="" class="">
+            </div>
+        </div>
+        <div class="service__feature feature">
+            <div class="feature__inner">
+                <h3 class="feature__title feature-title"><span class="feature-title__main">features</span><span class="feature-title__sub">特徴</span></h3>
+                <div class="feature__text">
+                    <p>弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。
+    </p>
+                    <p>これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく、オーナー様となる方がクルマから直接感じるリアルな感性を第一にした、最良の一台との出会いをコーディネートいたします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="service" id="service3">
+        <div class="service__inner">
+            <div class="service__body">
+                <div class="service__title-num">03</div>
+                <h2 class="service__title-text">車検・点検</h2>
+                <p class="service__text">輸入車の取り扱いが県内トップクラス。専門の整備工場へ任せたいならわたしたちへご相談ください。</p>
+            </div>
+            <div class="service__img">
+                <img src="<?php echo esc_url(get_theme_file_uri("/images/service3.jpg")) ?>" alt="" class="">
+            </div>
+        </div>
+        <div class="service__feature feature">
+            <div class="feature__inner">
+                <h3 class="feature__title feature-title"><span class="feature-title__main">features</span><span class="feature-title__sub">特徴</span></h3>
+                <div class="feature__text">
+                    <p>弊社は、輸入車選びのすべてを見つめ直し、新たなスタイルを提案するインポート・セレクト・ブランドです。
+    </p>
+                    <p>これまでの憧れだけや批評家の意見といったイメージで選ぶのではなく、オーナー様となる方がクルマから直接感じるリアルな感性を第一にした、最良の一台との出会いをコーディネートいたします。</p>
+                </div>
+            </div>
         </div>
     </section>
 

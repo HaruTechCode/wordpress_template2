@@ -63,7 +63,7 @@
           </div>
           <div class="card__text">高度な輸入車修理技術と数多くの修理実績、熟練の技術・設備であなたの愛車を完全に直します。</div>
           <div class="card__link-wrapper">
-            <a class="card__link animation-link animation-link--button">read more</a>
+            <a href="<?php echo esc_url(home_url('service#service2')); ?>" class="card__link animation-link animation-link--button">read more</a>
           </div>
         </li>
         <li class="top-service__card card">
@@ -75,7 +75,7 @@
           </div>
           <div class="card__text">輸入車の取り扱いが県内トップクラス。専門の整備工場へ任せたいなら弊社へご相談ください。</div>
           <div class="card__link-wrapper">
-            <a class="card__link animation-link animation-link--button">read more</a>
+            <a href="<?php echo esc_url(home_url('service#service3')); ?>" class="card__link animation-link animation-link--button">read more</a>
           </div>
         </li>
       </ul>
@@ -160,35 +160,56 @@
         <ul class="top-news__tag-list js-inview bottom-fade-in">
           <!-- TODO aタグが必要かも。wordPressの関数でタグを表示したあとに修正 -->
           <li class="top-news__tag-list-item top-news__tag-list-item--selected">すべてのお知らせ</li>
-          <li class="top-news__tag-list-item">トピックス</li>
-          <li class="top-news__tag-list-item">イベント・キャンペーン</li>
-          <li class="top-news__tag-list-item">入庫車情報</li>
+          <?php
+            $tags = get_tags();
+            foreach ( $tags as $tag ) {
+              echo '<li class="top-news__tag-list-item">';
+              echo '<a href="';
+              echo esc_url(get_tag_link($tag->term_id));
+              echo '">';
+              echo $tag->name;
+              echo '</a></li>';
+            }
+          ?>
         </ul>
       </div>
       <div class="top-news__main">
         <ul class="top-news__articles">
-          <li class="top-news__article">
-            <div class="top-news__article-info">
-              <time class="top-news__date date" datetime="2022-09-02">2022.09.02</time>
-              <div class="top-news__tag tag tag--white">トピックス</div>
-              <div class="top-news__tag tag tag--white">イベント・キャンペーン</div>
-            </div>
-            <div class="top-news__article-title">2022年10月8日・9日・10日の3日間、試乗車フェアを開催します</div>
-          </li>
-          <li class="top-news__article">
-            <div class="top-news__article-info">
-              <time class="top-news__date date" datetime="2022-09-02">2022.09.02</time>
-              <div class="top-news__tag tag tag--white">トピックス</div>
-              <div class="top-news__tag tag tag--white">イベント・キャンペーン</div>
-            </div>
-            <div class="top-news__article-title">2022年10月8日・9日・10日の3日間、試乗車フェアを開催します</div>
-          </li>
-        </ul>
+          <?php
+              $args = [
+                'post_type' => 'post',
+                'post_per_page' => 5
+              ];
+              $the_query = new WP_Query($args);
+          ?>
+          <?php if ($the_query->have_posts()) : ?>
+              <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                  <li class="top-news__article">
+                    <div class="top-news__article-info">
+                      <time class="top-news__date date" datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
+                      <?php
+                        $tags = get_the_tags();
+                        foreach ( $tags as $tag ) {
+                          echo '<div class="top-news__tag tag tag--white">';
+                          echo '<a class="tag__link" href="';
+                          echo esc_url(get_tag_link($tag->term_id));
+                          echo '">';
+                          echo $tag->name;
+                          echo '</a></div>';
+                        }
+                        ?>
+                    </div>
+                    <div class="top-news__article-title"><a href="<?php echo esc_url(get_permalink($post->ID)) ?>"><?php echo the_title(); ?></a></div>
+                  </li>
+              <?php endwhile; ?>
+              <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
         <div class="top-news__link-container">
           <a href="" class="top-news__link animation-link">read more</a>
         </div>
       </div>
     </div>
   </section>
+
 </main>
 <?php get_footer(); ?>

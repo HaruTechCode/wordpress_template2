@@ -3,6 +3,7 @@
 .service {
   background-color: $lightgray;
 }
+
 .service__inner {
   display: flex;
 
@@ -39,8 +40,9 @@
 }
 
 .service__title-num {
-  color: $navy;
+  color: $dark_navy;
   font-size: 40px;
+  font-family: $alphabet-font;
 }
 
 .service__title-num::after {
@@ -62,6 +64,37 @@
   margin-top: 25px;
 }
 
+.feature {
+  padding-bottom: 150px;
+}
+
 .service__feature {
   margin-top: 30px;
+}
+
+.feature-title__main {
+  text-transform: uppercase;
+}
+
+.feature__inner {
+  padding-right: vw(1440, 170);
+  padding-left: vw(1440, 170);
+}
+
+.feature-title__main {
+  font-size: 22px;
+  line-height: 1.8181;
+  font-family: $alphabet-font;
+}
+
+.feature-title__sub {
+  margin-left: 16px;
+  color: $gray;
+  font-size: 12px;
+  line-height: 3.3333;
+}
+
+.feature__text {
+  font-size: 16px;
+  line-height: 2.375;
 }
