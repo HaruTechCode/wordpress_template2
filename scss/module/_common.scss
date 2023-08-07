@@ -38,7 +38,7 @@
   display: inline-block;
   position: relative;
   width: 101px;
-  color: $navy;
+  color: $dark_navy;
   font-weight: $medium;
   font-size: 14px;
   line-height: calc(40 / 14);
@@ -55,8 +55,8 @@
   width: 8px;
   height: 8px;
   border: 0;
-  border-top: solid 2px $navy;
-  border-right: solid 2px $navy;
+  border-top: solid 2px $dark_navy;
+  border-right: solid 2px $dark_navy;
   content: "";
   transition: left 0.3s;
 }

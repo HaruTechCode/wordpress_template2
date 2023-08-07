@@ -45,41 +45,6 @@ function my_wp_head()
 }
 add_action("wp_head", "my_wp_head");
 
-function custom_search($search, $wp_query) {
-    global $wpdb;
-
-    if (!$wp_query->is_search)
-        return $search;
-    if (!isset($wp_query->query_vars))
-        return $search;
-
-    $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
-    $field_types = $_GET['field_type'];
-    $field_types = array_map('esc_sql', $field_types);
-    $field_type_text = isset($field_types) ? "('" . implode("' , '", $field_types) . "')" : "(null)";
-    if ( count($search_words) > 0 ) {
-        $search = '';
-        $search .= "AND post_type = 'works'";
-        foreach ( $search_words as $word ) {
-            if ( !empty($word) ) {
-                $search_word = '%' . esc_sql( $word ) . '%';
-                $search .= " AND (
-                     {$wpdb->posts}.post_title LIKE '{$search_word}'
-                    OR {$wpdb->posts}.post_content LIKE '{$search_word}'
-                    OR {$wpdb->posts}.ID IN (
-                    SELECT distinct post_id
-                    FROM {$wpdb->postmeta}
-                    WHERE meta_value LIKE '{$search_word}' AND
-                    meta_key IN {$field_type_text}
-                    )
-                ) ";
-            }
-        }
-    }
-    return $search;
-}
-add_filter('posts_search','custom_search', 10, 2);
-
 function Change_menulabel() {
 	global $menu;
 	global $submenu;

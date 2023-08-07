@@ -177,7 +177,7 @@ select::-ms-expand {
   display: inline-block;
   position: relative;
   width: 101px;
-  color: #011950;
+  color: #001e63;
   font-weight: 500;
   font-size: 14px;
   line-height: 2.8571428571;
@@ -194,8 +194,8 @@ select::-ms-expand {
   width: 8px;
   height: 8px;
   border: 0;
-  border-top: solid 2px #011950;
-  border-right: solid 2px #011950;
+  border-top: solid 2px #001e63;
+  border-right: solid 2px #001e63;
   content: "";
   transition: left 0.3s;
 }
