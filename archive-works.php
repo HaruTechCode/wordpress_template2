@@ -46,8 +46,11 @@
                                         }
                                         }
                                         ?>
-                                        <div class="works__article-title">
-                                            <span class="works__underline"><?php the_title(); ?></span>
+                                        <div class="works__article-title md-none">
+                                            <span class="works__underline"><?php echo mb_strimwidth(get_the_title(), 0, 92, "..."); ?></span>
+                                        </div>
+                                        <div class="works__article-title md-show">
+                                            <span class="works__underline"><?php echo mb_strimwidth(get_the_title(), 0, 48, "..."); ?></span>
                                         </div>
                                         <div class="works__date date"><?php echo get_the_date('Y.m.d') ?></div>
                                     </div>

@@ -9,6 +9,11 @@
     padding-left: 60px;
     border-left: 1px solid $gray4;
     background-color: $white;
+
+    @include mq("md") {
+        padding-left: 0;
+        border: none;
+    }
 }
 
 .works__article {
@@ -17,7 +22,6 @@
     border-bottom: 1px solid $gray4;
 
     @include mq("md") {
-        margin: 0 40px;
         padding: 30px 0;
     }
 }
@@ -32,24 +36,35 @@
     -o-object-fit: contain;
     object-fit: contain;
     @include mq("md") {
-        width: 130px;
-        height: 100px;
+        width: 44%;
+        //height: 100px;
     }
 }
 
 .works__article-body {
     margin-left: 50px;
     padding-right: 64px;
+
+    @include mq("md") {
+        width: calc(46% - 15px);
+        margin-left: 15px;
+        padding-right: 0;
+    }
 }
 
 .works__article-title {
     position: relative;
+    max-width: 30em;
     margin-top: 35px;
     color: $black;
     font-size: 18px;
     line-height: calc(38 / 24);
+    word-break: break-all;
+    word-wrap: break-word;
 
     @include mq("md") {
+        max-width: 100%;
+        margin-top: 35px;
         margin-top: 12px;
         font-size: 14px;
         line-height: calc(28 / 14);
@@ -93,7 +108,8 @@
     box-sizing: border-box;
 
     @include mq("md") {
-        padding-right: 10px;
+        width: 100%;
+        padding: 0 14px;
     }
 }
 
@@ -101,10 +117,21 @@
     position: sticky;
     top: 80px;
     //ヘッダーの高さは定数化
+
+    @include mq("md") {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .works__inner {
     display: flex;
     margin-top: 58px;
     margin-bottom: 120px;
+
+    @include mq("md") {
+        display: block;
+        padding: 0 40px;
+    }
 }
