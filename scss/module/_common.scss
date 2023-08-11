@@ -171,7 +171,7 @@
     padding-top: 240px;
 
     @include mq("md") {
-        padding-top: 110px;
+        padding-top: 30px;
     }
 }
 .page-fv__inner {
@@ -203,7 +203,7 @@
     display: block;
     font-weight: $bold;
     font-size: vw(1440, 100);
-    font-family: Oswald;
+    font-family: $alphabet-font;
 
     @include mq("md") {
         font-size: vw(375, 44);
@@ -349,6 +349,10 @@
     margin-left: auto;
     font-size: 15px;
     line-height: calc(20 / 15);
+
+    @include mq("md") {
+        font-size: 10px;
+    }
 }
 
 .breadcrumb a {

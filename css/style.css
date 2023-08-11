@@ -311,7 +311,7 @@ select::-ms-expand {
 }
 @media screen and (max-width: 768px) {
   .page-fv {
-    padding-top: 110px;
+    padding-top: 30px;
   }
 }
 
@@ -347,7 +347,7 @@ select::-ms-expand {
   display: block;
   font-weight: 700;
   font-size: 6.9444444444vw;
-  font-family: Oswald;
+  font-family: "Oswald";
 }
 @media screen and (max-width: 768px) {
   .page-fv__heading-main {
@@ -508,6 +508,11 @@ select::-ms-expand {
   margin-left: auto;
   font-size: 15px;
   line-height: 1.3333333333;
+}
+@media screen and (max-width: 768px) {
+  .breadcrumb {
+    font-size: 10px;
+  }
 }
 
 .breadcrumb a {
