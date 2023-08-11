@@ -1,0 +1,51 @@
+@use "../global" as *;
+// ページネーションの要素を横並びにする
+.nav-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: auto;
+    margin-top: 60px;
+    font-family: $alphabet-font;
+
+    gap: 13px;
+    @include mq("md") {
+        justify-content: center;
+        margin-top: 39px;
+    }
+
+    .page-numbers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: $gray5;
+        color: $black2;
+    }
+
+    .page-numbers.current {
+        width: 40px;
+        height: 40px;
+        background-color: $dark_navy;
+        color: $white;
+    }
+
+    .page-numbers.prev {
+        transform: rotate(45deg);
+        width: 12px;
+        height: 12px;
+        border-bottom: 3px $black2 solid;
+        border-left: 3px $black2 solid;
+        background-color: transparent;
+    }
+
+    .page-numbers.next {
+        transform: rotate(-45deg);
+        width: 12px;
+        height: 12px;
+        border-right: 3px $black2 solid;
+        border-bottom: 3px $black2 solid;
+        background-color: transparent;
+    }
+}

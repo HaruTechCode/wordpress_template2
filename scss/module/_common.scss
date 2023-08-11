@@ -1,371 +1,391 @@
 @use "../global" as *;
 
 .inner {
-  width: 100%;
-  max-width: 1140px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 0 20px;
+    width: 100%;
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
 }
 .page-inner {
-  width: 100%;
-  max-width: 1100px;
-  margin-right: auto;
-  margin-left: auto;
+    width: 100%;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 ._fa:before {
-  font-family: $fa-font;
+    font-family: $fa-font;
 }
 
 .large-heading {
-  font-weight: $bold;
-  font-size: 70px;
-  font-family: "Oswald";
+    font-weight: $bold;
+    font-size: 70px;
+    font-family: "Oswald";
 }
 .large-heading--right {
-  text-align: right;
+    text-align: right;
 
-  @include mq("md") {
-    text-align: left;
-  }
+    @include mq("md") {
+        text-align: left;
+    }
 }
 
 //animation-link
 //Fixme アニメーションのScaleが親要素の長さに依存する(?)のが良くない。
 //TODO aタグはcursor: pointerになるべき
 .animation-link {
-  display: inline-block;
-  position: relative;
-  width: 101px;
-  color: $dark_navy;
-  font-weight: $medium;
-  font-size: 14px;
-  line-height: calc(40 / 14);
-  text-transform: uppercase;
-  white-space: nowrap;
-  cursor: pointer;
+    display: inline-block;
+    position: relative;
+    width: 101px;
+    color: $dark_navy;
+    font-weight: $medium;
+    font-size: 14px;
+    line-height: calc(40 / 14);
+    text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
 }
 
 .animation-link::after {
-  display: inline-block;
-  position: relative;
-  left: 10px;
-  transform: rotate(45deg);
-  width: 8px;
-  height: 8px;
-  border: 0;
-  border-top: solid 2px $dark_navy;
-  border-right: solid 2px $dark_navy;
-  content: "";
-  transition: left 0.3s;
+    display: inline-block;
+    position: relative;
+    left: 10px;
+    transform: rotate(45deg);
+    width: 8px;
+    height: 8px;
+    border: 0;
+    border-top: solid 2px $dark_navy;
+    border-right: solid 2px $dark_navy;
+    content: "";
+    transition: left 0.3s;
 }
 .animation-link:hover::after {
-  left: 15px;
+    left: 15px;
 }
 
 .animation-link::before {
-  position: absolute;
-  bottom: 5px;
-  left: 0;
-  transform: scale(0, 1);
-  width: 100%;
-  height: 1px;
-  background: $navy;
-  content: "";
-  transition: transform 0.3s;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    transform: scale(0, 1);
+    width: 100%;
+    height: 1px;
+    background: $navy;
+    content: "";
+    transition: transform 0.3s;
 
-  transform-origin: left top;
+    transform-origin: left top;
 }
 .animation-link:hover::before {
-  transform: scale(1, 1);
+    transform: scale(1, 1);
 }
 
 .animation-link--button {
-  width: 146px;
-  padding: 12px 24px;
-  border: 1px solid $navy;
-  border-radius: 4px;
-  line-height: 1;
+    width: 146px;
+    padding: 12px 24px;
+    border: 1px solid $navy;
+    border-radius: 4px;
+    line-height: 1;
 }
 .animation-link--button::before {
-  content: none;
+    content: none;
 }
 
 .left-fade-in {
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: opacity 0.8s, transform 0.8s;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s, transform 0.8s;
 }
 
 .left-fade-in.is-inview {
-  opacity: 1;
-  transform: translateX(0);
-  transition-delay: 0.5s;
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.5s;
 }
 
 .top-fade-in {
-  opacity: 0;
-  transform: translateY(-100px);
-  transition: opacity 0.8s, transform 0.8s;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 0.8s, transform 0.8s;
 }
 
 .top-fade-in.is-inview {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.5s;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
 }
 
 .bottom-fade-in {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 0.8s, transform 0.8s;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.8s, transform 0.8s;
 }
 
 .bottom-fade-in.is-inview {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.5s;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s;
 }
 
 .date {
-  color: $gray3;
-  font-size: 12px;
-  line-height: calc(40 / 12);
+    color: $gray3;
+    font-size: 12px;
 }
 
 //.top-works__article-category
 .tag {
-  display: inline-block;
-  padding: 7px 18px;
-  background-color: $gray2;
-  color: $gray;
-  font-size: 11px;
-
-  a {
+    display: inline-block;
+    padding: 7px 18px;
+    background-color: $gray2;
     color: $gray;
-  }
+    font-size: 11px;
+
+    a {
+        color: $gray;
+    }
 }
 
 .tag.tag--white {
-  background-color: $white;
+    background-color: $white;
 }
 
 .sns-links {
-  display: flex;
+    display: flex;
 }
 
 .sns-link {
-  width: 22px;
+    width: 22px;
 }
 
 .sns-link:not(:first-child) {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 .sns-link.sns-link--twitter {
-  position: relative;
-  top: 2px;
+    position: relative;
+    top: 2px;
 }
 
 .page-fv {
-  padding-top: 240px;
+    padding-top: 240px;
 
-  @include mq("md") {
-    padding-top: 110px;
-  }
+    @include mq("md") {
+        padding-top: 110px;
+    }
 }
 .page-fv__inner {
-  position: relative;
-  width: 100%;
-  padding-left: vw(1440, 170);
+    position: relative;
+    width: 100%;
+    padding-left: vw(1440, 170);
 
-  @include mq("md") {
-    padding-left: 10px;
-  }
+    @include mq("md") {
+        padding-left: 10px;
+    }
 }
 .page-fv__heading {
-  position: absolute;
-  z-index: 2;
-  width: vw(1440, 500);
-  padding-bottom: vw(1440, 50);
-  padding-left: vw(1440, 50);
-  background-color: $white;
-  color: $black;
+    position: absolute;
+    z-index: 2;
+    width: vw(1440, 500);
+    padding-bottom: vw(1440, 50);
+    padding-left: vw(1440, 50);
+    background-color: $white;
+    color: $black;
 
-  @include mq("md") {
-    width: vw(375, 190);
-    padding-bottom: vw(375, 40);
-    padding-left: vw(375, 28);
-  }
+    @include mq("md") {
+        width: vw(375, 190);
+        padding-bottom: vw(375, 40);
+        padding-left: vw(375, 28);
+    }
 }
 
 .page-fv__heading-main {
-  display: block;
-  font-weight: $bold;
-  font-size: vw(1440, 100);
-  font-family: Oswald;
+    display: block;
+    font-weight: $bold;
+    font-size: vw(1440, 100);
+    font-family: Oswald;
 
-  @include mq("md") {
-    font-size: vw(375, 44);
-  }
+    @include mq("md") {
+        font-size: vw(375, 44);
+    }
 }
 
 .page-fv__heading-sub {
-  display: block;
-  font-weight: $bold;
-  font-size: vw(1440, 20);
+    display: block;
+    font-weight: $bold;
+    font-size: vw(1440, 20);
 
-  @include mq("md") {
-    font-size: vw(375, 12);
-  }
+    @include mq("md") {
+        font-size: vw(375, 12);
+    }
 }
 .page-fv__inner img {
-  @include mq("md") {
-    height: vw(375, 280);
-  }
+    @include mq("md") {
+        height: vw(375, 280);
+    }
 }
 
 .page-nav-link {
-  position: relative;
-  color: $navy;
-  font-size: 16px;
+    position: relative;
+    color: $navy;
+    font-size: 16px;
 }
 .page-nav-link::after {
-  display: inline-block;
-  position: relative;
-  top: -4px;
-  left: 10px;
-  transform: rotate(45deg);
-  width: 8px;
-  height: 8px;
-  border: 0;
-  border-right: solid 2px $navy;
-  border-bottom: solid 2px $navy;
-  content: "";
-  transition: left 0.3s;
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    left: 10px;
+    transform: rotate(45deg);
+    width: 8px;
+    height: 8px;
+    border: 0;
+    border-right: solid 2px $navy;
+    border-bottom: solid 2px $navy;
+    content: "";
+    transition: left 0.3s;
 }
 
 .page-top__inner {
-  width: 100%;
-  max-width: 840px;
-  margin: 0 auto;
-  padding: 0 20px;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .page-nav-links {
-  display: flex;
-  justify-content: center;
-  margin-top: 63px;
+    display: flex;
+    justify-content: center;
+    margin-top: 63px;
 
-  column-gap: 120px;
-  @include mq("md") {
-    column-gap: 55px;
-  }
+    column-gap: 120px;
+    @include mq("md") {
+        column-gap: 55px;
+    }
 }
 .page-top {
-  padding-top: 103px;
-  padding-bottom: 128px;
+    padding-top: 103px;
+    padding-bottom: 128px;
 
-  @include mq("md") {
-    padding-top: 66px;
-    padding-bottom: 86px;
-  }
+    @include mq("md") {
+        padding-top: 66px;
+        padding-bottom: 86px;
+    }
 }
 .page-top__title {
-  color: $black;
-  font-size: 40px;
-  line-height: calc(60 / 40);
+    color: $black;
+    font-size: 40px;
+    line-height: calc(60 / 40);
 
-  @include mq("md") {
-    font-size: 18px;
-    line-height: calc(37 / 18);
-  }
+    @include mq("md") {
+        font-size: 18px;
+        line-height: calc(37 / 18);
+    }
 }
 .page-top__text {
-  margin-top: 58px;
-  color: $black;
-  font-size: 16px;
-  line-height: calc(38 / 16);
+    margin-top: 58px;
+    color: $black;
+    font-size: 16px;
+    line-height: calc(38 / 16);
 
-  @include mq("md") {
-    margin-top: 38px;
-    font-size: 14px;
-    line-height: calc(32 / 14);
-  }
+    @include mq("md") {
+        margin-top: 38px;
+        font-size: 14px;
+        line-height: calc(32 / 14);
+    }
 }
 
 .page-section-heading__sub {
-  display: block;
-  color: $navy;
-  font-weight: bold;
-  font-size: 16px;
+    display: block;
+    color: $navy;
+    font-weight: bold;
+    font-size: 16px;
 
-  @include mq("md") {
-    font-size: 12px;
-  }
+    @include mq("md") {
+        font-size: 12px;
+    }
 }
 
 .page-section-heading__main {
-  display: block;
-  color: $black;
-  font-weight: $bold;
-  font-size: 40px;
-  line-height: calc(45 / 40);
-  font-family: Oswald;
+    display: block;
+    color: $black;
+    font-weight: $bold;
+    font-size: 40px;
+    line-height: calc(45 / 40);
+    font-family: Oswald;
 
-  @include mq("md") {
-    font-size: 26px;
-    line-height: calc(45 / 26);
-  }
+    @include mq("md") {
+        font-size: 26px;
+        line-height: calc(45 / 26);
+    }
 }
 
 .page-section-heading__main::after {
-  display: inline-block;
-  position: relative;
-  top: 4px;
-  width: 60px;
-  height: 2px;
-  margin: 20px;
-  background-color: $black;
-  content: "";
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    width: 60px;
+    height: 2px;
+    margin: 20px;
+    background-color: $black;
+    content: "";
 
-  @include mq("md") {
-    top: 12px;
-  }
+    @include mq("md") {
+        top: 12px;
+    }
 }
 
 .breadcrumb-wrapper {
-  display: flex;
-  margin-top: 18px;
-  padding: 0 10px;
+    display: flex;
+    margin-top: 18px;
+    padding: 0 60px;
 
-  @include mq("md") {
-    margin-top: 10px;
-  }
+    @include mq("md") {
+        margin-top: 10px;
+        padding: 0 10px;
+    }
 }
 
 .breadcrumb {
-  margin-left: auto;
-  font-size: 15px;
-  line-height: calc(20 / 15);
+    margin-left: auto;
+    font-size: 15px;
+    line-height: calc(20 / 15);
 }
 
 .breadcrumb a {
-  color: $gray4;
+    color: $gray4;
 }
 
 .breadcrumb > span:not(:last-child)::after {
-  display: inline-block;
-  position: relative;
-  top: -3px;
-  width: 20px;
-  height: 1px;
-  margin: 18px 20px 0;
-  background-color: $gray4;
-  content: "";
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    width: 20px;
+    height: 1px;
+    margin: 18px 20px 0;
+    background-color: $gray4;
+    content: "";
 }
 
-.flex-wrapper {
-  display: flex;
+.category-item-current {
+    position: relative;
+    color: $black;
+    font-size: 14px;
+    line-height: calc(40 / 14);
+}
+
+.category-item-current:before {
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%) translateX(-100%);
+    width: 8px;
+    height: 8px;
+    background: $dark_navy;
+    content: "";
+}
+
+.category-item-other {
+    color: $gray3;
+    font-size: 14px;
+    line-height: calc(40 / 14);
 }
