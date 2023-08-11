@@ -31,7 +31,7 @@
                     <ul class="works__articles">
                         <?php while (have_posts()) : the_post(); ?>
                             <li>
-                                <a class="works__article" href="<?php echo get_term_link($term) ?>">
+                                <a class="works__article" href="<?php the_permalink() ?>">
                                     <?php if (has_post_thumbnail()): ?>
                                         <?php the_post_thumbnail( 'medium', ['class' => 'works__article-img']); ?>
                                     <?php else: ?>

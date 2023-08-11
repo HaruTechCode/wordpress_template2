@@ -1,5 +1,6 @@
 @use "./base/base";
 @use "./base/reset";
+
 @use "./module/common";
 @use "./module/header";
 @use "./module/footer";
@@ -8,8 +9,11 @@
 @use "./module/form";
 @use "./module/responsive_display";
 @use "./module/pagination";
+
 @use "./page/front_page";
 @use "./page/works";
+@use "./page/news";
 @use "./page/contact_page";
 @use "./page/archive";
+
 @use "./global" as *;
