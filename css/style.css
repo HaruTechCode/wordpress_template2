@@ -1760,6 +1760,10 @@ select::-ms-expand {
   }
 }
 
+.works__article:hover {
+  opacity: 1;
+}
+
 .works__article-img {
   width: 160px;
   height: 100%;
@@ -1781,6 +1785,7 @@ select::-ms-expand {
 .works__article-title {
   position: relative;
   margin-top: 35px;
+  color: #000000;
   font-size: 18px;
   line-height: 1.5833333333;
 }

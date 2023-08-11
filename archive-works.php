@@ -30,28 +30,28 @@
                 <div class="works__articles-wrapper">
                     <ul class="works__articles">
                         <?php while (have_posts()) : the_post(); ?>
-                            <li class="works__article">
-                                <?php if (has_post_thumbnail()): ?>
-                                    <?php the_post_thumbnail( 'medium', ['class' => 'works__article-img']); ?>
-                                <?php else: ?>
-                                    <img src="<?php echo esc_url(get_theme_file_uri("/images/noimage.png")) ?>" alt="" class="works__article-img">
-                                <?php endif; ?>
-                                <div class="works__article-body">
-                                    <?php
-                                    $terms = get_the_terms($post->ID, 'works_category');
-                                    if($terms) {
-                                    foreach ($terms as $term) {
-                                        echo '<div class="works__article-category tag"><a href="' . get_term_link($term) . '">' . $term->name . '</a></div>';
-                                    }
-                                    }
-                                    ?>
-                                    <div class="works__article-title">
-                                        <a href="<?php the_permalink(); ?>">
+                            <li>
+                                <a class="works__article" href="<?php echo get_term_link($term) ?>">
+                                    <?php if (has_post_thumbnail()): ?>
+                                        <?php the_post_thumbnail( 'medium', ['class' => 'works__article-img']); ?>
+                                    <?php else: ?>
+                                        <img src="<?php echo esc_url(get_theme_file_uri("/images/noimage.png")) ?>" alt="" class="works__article-img">
+                                    <?php endif; ?>
+                                    <div class="works__article-body">
+                                        <?php
+                                        $terms = get_the_terms($post->ID, 'works_category');
+                                        if($terms) {
+                                        foreach ($terms as $term) {
+                                            echo '<div class="works__article-category tag">' . $term->name . '</div>';
+                                        }
+                                        }
+                                        ?>
+                                        <div class="works__article-title">
                                             <span class="works__underline"><?php the_title(); ?></span>
-                                        </a>
+                                        </div>
+                                        <div class="works__date date"><?php echo get_the_date('Y.m.d') ?></div>
                                     </div>
-                                    <div class="works__date date"><?php echo get_the_date('Y.m.d') ?></div>
-                                </div>
+                                </a>
                             </li>
                         <?php endwhile; ?>
                     </ul>
