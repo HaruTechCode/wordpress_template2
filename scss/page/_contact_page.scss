@@ -1,152 +1,96 @@
-/******************************/
-/** コンタクトフォームの装飾 **/
-/******************************/
-/*　フォーム全体　*/
-#cf7-area {
-    width: 100%;
+@use "../global" as *;
+
+.contact__inner {
+    max-width: 680px;
     margin: 0 auto;
-    font-family: “遊ゴシック”, ”ヒラギノ角ゴ”, ”メイリオ”, ”MS Pゴシック”,
-        sans-serif;
+    padding: 20px;
+
+    @include mq("md") {
+        padding: 10px;
+    }
 }
 
-.cf7-item {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 0 0 1.75em;
+.contact-form {
+    //
 }
 
-.cf7-q {
-    width: 30%;
-    margin: 0 0 0 10px;
+.contact-form__item:not(:first-child) {
+    margin-top: 45px;
 }
 
-.cf7-a {
-    width: 60%;
+.contact-form__label {
+    //
+    line-height: 1;
 }
 
-/*　見出し　*/
-.form-heading {
+.contact-form__label-name {
+    color: $black;
+    font-size: 15px;
+}
+
+.contact-form__label-asterisk {
+    color: $red;
+    font-size: 15px;
+}
+
+.contact-form__label-description {
+    margin-left: 21px;
+    color: $black;
+    font-size: 14px;
+}
+
+.wpcf7-text {
     width: 100%;
-    margin: 0 0 2em;
-    padding: 1em 0.8em;
-    border-left: 1em solid #6495ed;
-    border-radius: 2px;
-    background-color: #191970;
-    color: #ffffff;
-    font-weight: bold;
+    height: 50px;
+    padding-left: 15px;
+    border: 1px solid $gray4;
+    border-radius: 4px;
+}
+.wpcf7-text::placeholder {
+    color: $gray3;
 }
 
-.form-heading p {
-    margin: 0;
+.wpcf7-select {
+    width: 100%;
+    height: 50px;
+    padding-left: 15px;
+    border: 1px solid $gray4;
+    border-radius: 4px;
 }
 
-/* 各項目共通 */
-#cf7-area label {
-    font-weight: bold;
+.wpcf7-textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid $gray4;
+    border-radius: 4px;
 }
 
-#cf7-area input[type="”text”"],
-#cf7-area input[type="”email”"],
-#cf7-area input[type="”tel”"],
-#cf7-area textarea {
-    width: 500px;
-    margin-left: 10px;
-    background: #f0f8ff;
+.wpcf7-checkbox {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid $gray4;
+    border-radius: 4px;
 }
 
-#cf7-area input[type="”text”"]:focus,
-#cf7-area input[type="”email”"]:focus,
-#cf7-area input[type="”tel”"]:focus,
-#cf7-area textarea:focus {
-    border: 2px solid #ff1493;
-    background: #ffe4e1;
-    outline: 0;
-}
+.wpcf7-acceptance input {
+    display: inline;
 
-#cf7-area input[type="”checkbox”"],
-#cf7-area input[type="”radio”"] {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
     appearance: auto;
 }
 
-#cf7-area .wpcf7-list-item {
+.wpcf7-submit {
     display: block;
-}
-
-#cf7-area textarea {
-    height: 200px;
-    padding: 0.625em 0.4375em;
-}
-
-.cf7-accept-check {
-    margin: 50px auto;
-    text-align: center;
-}
-
-.cf7-submit {
-    width: 40%;
+    width: 460px;
+    height: 66px;
     margin: 0 auto;
-    text-align: center;
+    background-color: $navy;
+    color: $white;
+    font-size: 18px;
 }
 
-#cf7-area input[type="”submit”"] {
-    width: 100%;
-    padding: 1em 10px;
-    border-radius: 5px;
-    background-color: #191970;
-    color: #ffffff;
-    font-size: 1.2em;
-}
-
-#cf7-area input[type="”submit”"]:hover {
-    border: 2px solid #191970;
-    background-color: #ffffff;
-    color: #191970;
-}
-
-.cf7-btn {
-    width: 40%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/*　必須ラベル　*/
-.cf7-req {
-    display: inline-block;
-    margin-left: 10px;
-    padding: 4px 6px;
-    background: #eb2a2a;
-    color: #ffffff;
-    font-size: 0.8em;
-}
-
-@media screen and (max-width: 768px) {
-    .cf7-item {
-        display: block;
-    }
-
-    #cf7-area label {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .cf7-q {
-        width: 100%;
-        margin: 0;
-    }
-
-    .cf7-a {
-        width: 100%;
-    }
-
-    #cf7-area input[type="”text”"],
-    #cf7-area input[type="”email”"],
-    #cf7-area input[type="”tel”"],
-    #cf7-area textarea {
-        margin-left: 0;
-    }
-
-    .cf7-submit {
-        width: 90%;
-    }
+.wpcf7-submit:disabled {
+    background-color: $gray3;
 }
