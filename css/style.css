@@ -2043,95 +2043,191 @@ select::-ms-expand {
   }
 }
 
-.contact__inner {
+.contact .contact__inner {
   max-width: 680px;
   margin: 0 auto;
   padding: 20px;
 }
 @media screen and (max-width: 768px) {
-  .contact__inner {
+  .contact .contact__inner {
     padding: 10px;
   }
 }
-
-.contact-form__item:not(:first-child) {
+.contact .contact-form__item:not(:first-child) {
   margin-top: 45px;
 }
-
-.contact-form__label {
+.contact .contact-form__label {
   line-height: 1;
 }
-
-.contact-form__label-name {
+.contact .contact-form__label-name {
   color: #000000;
   font-size: 15px;
 }
-
-.contact-form__label-asterisk {
+.contact .contact-form__label-asterisk {
   color: #e20000;
   font-size: 15px;
 }
-
-.contact-form__label-description {
+.contact .contact-form__label-description {
   margin-left: 21px;
   color: #000000;
   font-size: 14px;
 }
-
-.wpcf7-text {
+.contact .wpcf7-text {
   width: 100%;
   height: 50px;
   padding-left: 15px;
   border: 1px solid #e2e2e2;
   border-radius: 4px;
 }
-
-.wpcf7-text::placeholder {
+.contact .wpcf7-text::placeholder {
   color: #a9a9a9;
 }
-
-.wpcf7-select {
+.contact .wpcf7-select {
   width: 100%;
   height: 50px;
   padding-left: 15px;
   border: 1px solid #e2e2e2;
   border-radius: 4px;
 }
-
-.wpcf7-textarea {
+.contact .wpcf7-textarea {
   width: 100%;
   padding: 15px;
   border: 1px solid #e2e2e2;
   border-radius: 4px;
 }
-
-.wpcf7-checkbox {
+.contact .wpcf7-checkbox {
   display: inline-block;
   width: 17px;
   height: 17px;
   border: 1px solid #e2e2e2;
   border-radius: 4px;
 }
-
-.wpcf7-acceptance input {
+.contact .wpcf7-acceptance input {
   display: inline;
   -webkit-appearance: auto;
   -moz-appearance: auto;
   appearance: auto;
 }
-
-.wpcf7-submit {
+.contact .wpcf7-submit {
   display: block;
   width: 460px;
   height: 66px;
   margin: 0 auto;
+  border-radius: 4px;
+  background-color: #011950;
+  color: #ffffff;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .contact .wpcf7-submit {
+    width: 275px;
+  }
+}
+.contact .wpcf7-submit:disabled {
+  background-color: #a9a9a9;
+}
+
+.contact-confirm .contact-confirm__inner {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .contact-confirm .contact-confirm__inner {
+    padding: 10px;
+  }
+}
+.contact-confirm .contact-confirm__list {
+  margin-top: 112px;
+}
+.contact-confirm .contact-confirm__item {
+  display: flex;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+.contact-confirm .contact-confirm__item:not(:first-child) {
+  margin-top: 45px;
+}
+.contact-confirm .contact-confirm__term {
+  width: 35%;
+}
+.contact-confirm .contact-confirm__definition {
+  width: 65%;
+}
+.contact-confirm .contact-confirm__required {
+  color: #e20000;
+  font-size: 15px;
+}
+.contact-confirm .contact-confirm__buttons {
+  margin-top: 45px;
+}
+.contact-confirm .contact-confirm__buttons p {
+  display: flex;
+}
+.contact-confirm .wpcf7-previous {
+  display: block;
+  width: 30%;
+  height: 66px;
+  margin: 0 auto;
+  border: 1px solid #011950;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #011950;
+  font-size: 18px;
+}
+.contact-confirm .wpcf7-submit {
+  display: block;
+  width: 30%;
+  height: 66px;
+  margin: 0 auto;
+  border-radius: 4px;
   background-color: #011950;
   color: #ffffff;
   font-size: 18px;
 }
 
-.wpcf7-submit:disabled {
-  background-color: #a9a9a9;
+.contact-complete__title {
+  color: #000000;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.contact-complete__text {
+  margin-top: 43px;
+  color: #000000;
+  font-size: 16px;
+  line-height: 2.375;
+}
+
+.contact-complete__inner {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media screen and (max-width: 768px) {
+  .contact-complete__inner {
+    padding: 10px;
+  }
+}
+
+.contact-confirm__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 460px;
+  height: 66px;
+  margin: 0 auto;
+  margin-top: 48px;
+  border-radius: 4px;
+  background-color: #011950;
+  color: #ffffff;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .contact-confirm__button {
+    width: 460px;
+    height: 43px;
+  }
 }
 
 .archive-works__img {

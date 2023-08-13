@@ -1,0 +1,77 @@
+@use "../global" as *;
+
+.contact-confirm {
+    //
+
+    .contact-confirm__inner {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 20px;
+
+        @include mq("md") {
+            padding: 10px;
+        }
+    }
+
+    .contact-confirm__list {
+        margin-top: 112px;
+    }
+    .contact-confirm__item {
+        display: flex;
+        font-size: 14px;
+        letter-spacing: -0.01em;
+    }
+    .contact-confirm__item:not(:first-child) {
+        margin-top: 45px;
+    }
+    .contact-confirm__term {
+        width: 35%;
+    }
+    .contact-confirm__definition {
+        width: 65%;
+    }
+
+    .contact-confirm__required {
+        color: $red;
+        font-size: 15px;
+    }
+
+    .contact-confirm__buttons {
+        margin-top: 45px;
+        p {
+            display: flex;
+        }
+    }
+
+    .contact-confirm__back-button {
+        //
+    }
+
+    .contact-confirm__submit-input {
+        //
+    }
+    .wpcf7-previous {
+        display: block;
+        //width: 50%;
+        width: 30%;
+        height: 66px;
+        margin: 0 auto;
+        border: 1px solid $navy;
+        border-radius: 4px;
+        background-color: $white;
+        color: $navy;
+        font-size: 18px;
+    }
+
+    .wpcf7-submit {
+        display: block;
+        //width: 50%;
+        width: 30%;
+        height: 66px;
+        margin: 0 auto;
+        border-radius: 4px;
+        background-color: $navy;
+        color: $white;
+        font-size: 18px;
+    }
+}

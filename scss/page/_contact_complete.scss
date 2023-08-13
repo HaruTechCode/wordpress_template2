@@ -1,0 +1,43 @@
+@use "../global" as *;
+
+.contact-complete__title {
+    color: $black;
+    font-weight: $medium;
+    font-size: 40px;
+}
+
+.contact-complete__text {
+    margin-top: 43px;
+    color: $black;
+    font-size: 16px;
+    line-height: calc(38 / 16);
+}
+
+.contact-complete__inner {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px;
+
+    @include mq("md") {
+        padding: 10px;
+    }
+}
+
+.contact-confirm__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 460px;
+    height: 66px;
+    margin: 0 auto;
+    margin-top: 48px;
+    border-radius: 4px;
+    background-color: $navy;
+    color: $white;
+    font-size: 18px;
+
+    @include mq("md") {
+        width: 460px;
+        height: 43px;
+    }
+}

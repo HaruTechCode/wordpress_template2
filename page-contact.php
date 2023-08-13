@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<main>
     <section class="page-fv">
         <div class="page-fv__inner">
             <h2 class="page-fv__heading">
@@ -20,5 +21,5 @@
 			<?php endif; ?>
 		</div>
 	</div>
-<?php get_footer(); ?>
+</main>
 <?php get_footer(); ?>
