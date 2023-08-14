@@ -1,0 +1,55 @@
+@use "../global" as *;
+
+.single-works {
+    padding-top: 120px;
+}
+
+.single-works__inner {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px 120px;
+
+    @include mq("md") {
+        padding: 0 10px;
+    }
+}
+
+.single-works__date {
+    display: block;
+    margin-top: 36px;
+}
+
+.single-works__title {
+    margin-top: 20px;
+    font-weight: $medium;
+    font-size: 26px;
+}
+
+.single-works__img {
+    height: auto;
+    margin-top: 40px;
+}
+
+.single-works__detail-content {
+    padding: 40px 80px 0;
+
+    @include mq("md") {
+        padding: 0;
+    }
+}
+
+.single-works__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 43px;
+    margin: 60px auto 0;
+    border: $dark_navy 1px solid;
+    border-radius: 4px;
+    color: $dark_navy;
+    font-size: 14px;
+}

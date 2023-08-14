@@ -9,6 +9,7 @@
 @use "./module/form";
 @use "./module/responsive_display";
 @use "./module/pagination";
+@use "./module/detail-content";
 
 @use "./page/front_page";
 @use "./page/works";
@@ -17,5 +18,6 @@
 @use "./page/contact_confirm";
 @use "./page/contact_complete";
 @use "./page/archive";
+@use "./page/single_works";
 
 @use "./global" as *;

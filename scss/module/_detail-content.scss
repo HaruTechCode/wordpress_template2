@@ -1,0 +1,55 @@
+.detail-content h1 {
+    margin-bottom: 32px;
+    padding: 8px 16px;
+    border: 3px solid #67a7cc;
+    font-size: 28px;
+}
+
+.detail-content h2 {
+    margin-bottom: 32px;
+    padding: 8px 16px;
+    background-color: #67a7cc;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.detail-content h3 {
+    margin-bottom: 32px;
+    padding: 0 16px 8px;
+    border-bottom: 2px solid #67a7cc;
+    font-size: 20px;
+}
+
+.detail-content p {
+    margin-bottom: 24px;
+}
+
+.detail-content a {
+    display: block;
+    color: #0072bc;
+    text-decoration: underline;
+}
+
+.detail-content ul {
+    margin-bottom: 24px;
+}
+
+.detail-content li {
+    position: relative;
+    padding-left: 1em;
+}
+
+.detail-content li::after {
+    position: absolute;
+    top: 0.5em;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #67a7cc;
+    content: "";
+}
+
+.detail-content li + li {
+    margin-top: 4px;
+}
