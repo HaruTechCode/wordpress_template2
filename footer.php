@@ -40,13 +40,13 @@
         </div>
         <div class="footer__links">
             <ul class="footer-links">
-                <li class="footer-link"><a href="" class="footer-link__link">top</a></li>
-                <li class="footer-link"><a href="" class="footer-link__link">about</a></li>
-                <li class="footer-link"><a href="" class="footer-link__link">service</a></li>
-                <li class="footer-link"><a href="" class="footer-link__link">works</a></li>
-                <li class="footer-link"><a href="" class="footer-link__link">news</a></li>
-                <li class="footer-link"><a href="" class="footer-link__link">contact</a></li>
-                <li class="footer-link"><a href="" class="footer-link__link">プライバシーポリシー</a></li>
+                <li class="footer-link"><a href="<?php echo esc_url(home_url()); ?>" class="footer-link__link">top</a></li>
+                <li class="footer-link"><a href="<?php echo esc_url(home_url('about')); ?>" class="footer-link__link">about</a></li>
+                <li class="footer-link"><a href="<?php echo esc_url(home_url('service')); ?>" class="footer-link__link">service</a></li>
+                <li class="footer-link"><a href="<?php echo esc_url(home_url('works')); ?>" class="footer-link__link">works</a></li>
+                <li class="footer-link"><a href="<?php echo esc_url(home_url('news')); ?>" class="footer-link__link">news</a></li>
+                <li class="footer-link"><a href="<?php echo esc_url(home_url('contact')); ?>" class="footer-link__link">contact</a></li>
+                <li class="footer-link"><a href="<?php echo esc_url(home_url('privacy_policy')); ?>" class="footer-link__link">プライバシーポリシー</a></li>
             </ul>
         </div>
     </div>

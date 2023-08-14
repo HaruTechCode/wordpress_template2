@@ -369,6 +369,7 @@ select::-ms-expand {
 @media screen and (max-width: 768px) {
   .page-fv__inner img {
     height: 74.6666666667vw;
+    object-fit: cover;
   }
 }
 
@@ -2331,7 +2332,7 @@ select::-ms-expand {
   align-items: center;
   width: 280px;
   height: 43px;
-  margin-top: 60px;
+  margin: 60px auto 0;
   border: #001e63 1px solid;
   border-radius: 4px;
   color: #001e63;

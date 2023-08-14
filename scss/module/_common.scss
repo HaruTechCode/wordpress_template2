@@ -222,6 +222,8 @@
 .page-fv__inner img {
     @include mq("md") {
         height: vw(375, 280);
+
+        object-fit: cover;
     }
 }
 
