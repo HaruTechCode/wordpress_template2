@@ -1,4 +1,52 @@
+@use "../global" as *;
+
 .archive-works__img {
     width: 150px;
     height: 150px;
+}
+
+.archive {
+    padding-top: 120px;
+}
+
+.archive__inner {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px 120px;
+
+    @include mq("md") {
+        padding: 0 10px;
+    }
+}
+
+.archive__date {
+    display: block;
+    margin-top: 36px;
+}
+
+.archive__title {
+    margin-top: 20px;
+    font-weight: $medium;
+    font-size: 26px;
+}
+
+.archive__img {
+    height: auto;
+    margin-top: 40px;
+}
+
+.archive__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 43px;
+    margin: 60px auto 0;
+    border: $dark_navy 1px solid;
+    border-radius: 4px;
+    color: $dark_navy;
+    font-size: 14px;
 }

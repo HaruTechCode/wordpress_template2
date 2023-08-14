@@ -19,9 +19,8 @@ $(function () {
     });
 
     $(".js-slick").slick({
-        //開発中はautoplayしない
-        //autoplay: true,
-        autoplaySpeed: 3000,
+        autoplay: true,
+        autoplaySpeed: 2000,
     });
 
     $(".js-flow-slider").slick({
