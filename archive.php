@@ -14,13 +14,23 @@
     <div class="news__inner inner">
         <div class="news-category__list-container">
             <ul class="news-category__list">
-                <li class="category-item-current">すべての実績</li>
+                <?php
+                if (is_tag()) {
+                    echo '<li><a class="category-item-other" href="' . esc_url(get_post_type_archive_link('post')) . '">すべてのお知らせ</a></li>';
+                } else {
+                    echo '<li class="category-item-current">すべてのお知らせ</li>';
+                }
+                ?>
+
                 <?php
                 $terms = get_tags();
-
                 foreach ( $terms as $term ) {
                     $term_link = get_term_link( $term );
-                    echo '<li><a class="category-item-other" href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
+                    if (is_tag($term)) {
+                        echo '<li class="category-item-current">' . $term->name . '</li>';
+                    } else {
+                        echo '<li><a class="category-item-other" href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
+                    }
                 }
                 ?>
             </ul>

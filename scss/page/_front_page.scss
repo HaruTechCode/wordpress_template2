@@ -5,414 +5,415 @@ $fv_column_gap: 80px;
 $fv_text_margin: 45px;
 
 .fv {
-  width: 100%;
-  height: 100vh;
+    width: 100%;
+    height: 100vh;
 }
 .fv__inner {
-  display: flex;
-  width: 100%;
-  height: inherit;
-  padding: 0 80px;
+    display: flex;
+    width: 100%;
+    height: inherit;
+    padding: 0 80px;
 
-  -moz-column-gap: $fv_column_gap;
-       column-gap: $fv_column_gap;
-  @include mq("md") {
-    display: block;
-    padding: 0 10px;
-  }
+    -moz-column-gap: $fv_column_gap;
+    column-gap: $fv_column_gap;
+    @include mq("md") {
+        display: block;
+        padding: 0 10px;
+    }
 }
 
 .fv__slick {
-  //TODO 他の実装方法がないか調べる。どの幅まで縮まることを想定するかがわからないので、レスポンシブ後に確認する。うまく言語化できればchatGPTも使えるかも
-  width: calc(100% - ($fv_text_fz * 2 + $fv_column_gap + $fv_text_margin));
+    //TODO 他の実装方法がないか調べる。どの幅まで縮まることを想定するかがわからないので、レスポンシブ後に確認する。うまく言語化できればchatGPTも使えるかも
+    width: calc(100% - ($fv_text_fz * 2 + $fv_column_gap + $fv_text_margin));
 
-  @include mq("md") {
-    width: 100%;
-    //height: calc(100vh - 165px);
-  }
+    @include mq("md") {
+        width: 100%;
+        //height: calc(100vh - 165px);
+    }
 }
 
 .fv__slick img {
-  height: 100vh;
+    height: 100vh;
 
-  -o-object-fit: cover;
-     object-fit: cover;
-  @include mq("md") {
-    height: calc(100vh - 175px);
-  }
+    -o-object-fit: cover;
+    object-fit: cover;
+    @include mq("md") {
+        height: calc(100vh - 175px);
+    }
 }
 
 .fv__text-container {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 
-  @include mq("md") {
-    display: block;
-    margin-top: 30px;
-    margin-left: 10px;
-  }
+    @include mq("md") {
+        display: block;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
 }
 .fv__text-wrapper {
-  display: flex;
-  flex-direction: row-reverse;
+    display: flex;
+    flex-direction: row-reverse;
 
-  @include mq("md") {
-    display: block;
-  }
+    @include mq("md") {
+        display: block;
+    }
 }
 
 .fv__text {
-  font-weight: $bold;
-  font-size: $fv_text_fz;
-  line-height: 1;
-  letter-spacing: -0.01em;
+    font-weight: $bold;
+    font-size: $fv_text_fz;
+    line-height: 1;
+    letter-spacing: -0.01em;
 
-      -ms-writing-mode: tb-rl;
-  -webkit-writing-mode: vertical-rl;
-          writing-mode: vertical-rl;
-  @include mq("md") {
-    -webkit-writing-mode: horizontal-tb;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    @include mq("md") {
+        -webkit-writing-mode: horizontal-tb;
         -ms-writing-mode: lr-tb;
-            writing-mode: horizontal-tb;
-  }
+        writing-mode: horizontal-tb;
+    }
 }
 
 .fv__text:nth-child(1) {
-  margin-left: $fv_text_margin;
+    margin-left: $fv_text_margin;
 
-  @include mq("md") {
-    margin-left: 0;
-  }
+    @include mq("md") {
+        margin-left: 0;
+    }
 }
 .fv__text:nth-child(2) {
-  margin-top: 15px;
+    margin-top: 15px;
 }
 
 //flowing-box
 .flowing-box {
-  margin-top: 118px;
-  .flowing-box__inner {
-    position: relative;
-    height: 150px;
-    overflow: hidden;
-    .flowing-box__body {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      color: $navy;
-      font-weight: $bold;
-      font-size: 150px;
-      font-family: "Noto Sans JP";
-      white-space: nowrap;
+    margin-top: 118px;
+    .flowing-box__inner {
+        position: relative;
+        height: 150px;
+        overflow: hidden;
+        .flowing-box__body {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $navy;
+            font-weight: $bold;
+            font-size: 150px;
+            font-family: "Noto Sans JP";
+            white-space: nowrap;
+        }
     }
-  }
 }
 
 //top-about
 .top-about {
-  margin-top: 60px;
+    margin-top: 60px;
 }
 .top-about__inner {
-  display: grid;
+    display: grid;
 
-  grid-template-columns: 1fr 1fr;
-  @include mq("md") {
-    display: block;
-  }
+    grid-template-columns: 1fr 1fr;
+    @include mq("md") {
+        display: block;
+    }
 }
 .top-about__body {
-  margin-left: 60px;
+    margin-left: 60px;
 
-  @include mq("md") {
-    margin-left: 0;
-  }
+    @include mq("md") {
+        margin-left: 0;
+    }
 }
 
 .top-about__title {
-  margin-top: 70px;
-  font-weight: $bold;
-  font-size: 20px;
-  line-height: 2;
-  font-family: "oswald";
+    margin-top: 70px;
+    font-weight: $bold;
+    font-size: 20px;
+    line-height: 2;
+    font-family: "oswald";
 }
 
 .top-about__text {
-  margin-top: 30px;
-  font-weight: $medium;
-  line-height: 2;
+    margin-top: 30px;
+    font-weight: $medium;
+    line-height: 2;
 }
 
 .top-about__link-wrapper {
-  display: flex;
-  margin-top: 46px;
-  padding-right: 20px;
+    display: flex;
+    margin-top: 46px;
+    padding-right: 20px;
 }
 
 .top-about__link {
-  position: relative;
-  margin-left: auto;
+    position: relative;
+    margin-left: auto;
 }
 
 //top-service
 
 .top-service {
-  padding-top: 120px;
-  padding-bottom: 24px;
+    padding-top: 120px;
+    padding-bottom: 24px;
 }
 
 .top-service__cards {
-  display: grid;
-  margin-top: 60px;
+    display: grid;
+    margin-top: 60px;
 
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  -moz-column-gap: 48px;
-       column-gap: 48px;
-  @include mq("md") {
-    margin-top: 20px;
-  }
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    -moz-column-gap: 48px;
+    column-gap: 48px;
+    @include mq("md") {
+        margin-top: 20px;
+    }
 }
 
 .card {
-  position: relative;
-  padding-bottom: 60px;
+    position: relative;
+    padding-bottom: 60px;
 }
 
 .card__title-wrapper {
-  position: absolute;
-  top: 20%;
-  margin-left: 30px;
+    position: absolute;
+    top: 20%;
+    margin-left: 30px;
 }
 
 .card__title-sub {
-  color: $white;
-  font-weight: $bold;
-  font-size: 16px;
-  line-height: 1.2;
-  font-family: "Oswald";
+    color: $white;
+    font-weight: $bold;
+    font-size: 16px;
+    line-height: 1.2;
+    font-family: "Oswald";
 }
 
 .card__title-main {
-  margin-top: 17px;
-  color: $white;
-  font-weight: $bold;
-  font-size: 26px;
-  line-height: 1.2;
+    margin-top: 17px;
+    color: $white;
+    font-weight: $bold;
+    font-size: 26px;
+    line-height: 1.2;
 }
 
 .card__text {
-  margin-top: 14px;
-  color: $black;
-  font-weight: $medium;
-  font-size: 16px;
-  line-height: 2;
+    margin-top: 14px;
+    color: $black;
+    font-weight: $medium;
+    font-size: 16px;
+    line-height: 2;
 }
 
 .card__link-wrapper {
-  display: flex;
-  margin-top: 28px;
+    display: flex;
+    margin-top: 28px;
 }
 
 .card__link {
-  margin-left: auto;
+    margin-left: auto;
 }
 
 .top-works {
-  padding-top: 126px;
-  padding-bottom: 150px;
-  background-color: $lightgray;
+    padding-top: 126px;
+    padding-bottom: 150px;
+    background-color: $lightgray;
 }
 
 .top-works__articles-wrapper {
-  margin-top: 40px;
-  padding: 0 25px 50px;
-  background-color: $white;
+    margin-top: 40px;
+    padding: 0 25px 50px;
+    background-color: $white;
 
-  @include mq("md") {
-    margin: 40px -20px;
-    padding: 0 0 50px;
-  }
+    @include mq("md") {
+        margin: 40px -20px;
+        padding: 0 0 50px;
+    }
 }
 
 .top-works__article {
-  display: flex;
-  padding: 50px 40px 88px;
-  border-bottom: 1px solid $gray4;
+    display: flex;
+    padding: 50px 40px 88px;
+    border-bottom: 1px solid $gray4;
 
-  @include mq("md") {
-    margin: 0 40px;
-    padding: 30px 0;
-  }
+    @include mq("md") {
+        margin: 0 40px;
+        padding: 30px 0;
+    }
 }
 
 .top-works__article-img {
-  width: 290px;
+    width: 290px;
 
-  -o-object-fit: contain;
-     object-fit: contain;
-  @include mq("md") {
-    width: 120px;
-  }
+    -o-object-fit: contain;
+    object-fit: contain;
+    @include mq("md") {
+        width: 120px;
+    }
 }
 
 .top-works__article-body {
-  margin-left: 50px;
+    margin-left: 50px;
 }
 
 .top-works__article-title {
-  position: relative;
-  margin-top: 37px;
-  font-size: 24px;
-  line-height: calc(38 / 24);
+    position: relative;
+    margin-top: 37px;
+    font-size: 24px;
+    line-height: calc(38 / 24);
 
-  @include mq("md") {
-    margin-top: 12px;
-    font-size: 14px;
-    line-height: calc(28 / 14);
-  }
+    @include mq("md") {
+        margin-top: 12px;
+        font-size: 14px;
+        line-height: calc(28 / 14);
+    }
 }
 
 .top-works__underline {
-  display: inline;
-  padding-bottom: 3px;
-  background-image: linear-gradient(90deg, $black, $black);
-  background-position: left bottom;
-  background-size: 0 1px;
-  background-repeat: no-repeat;
-  transition: background-size 0.8s ease;
+    display: inline;
+    padding-bottom: 3px;
+    background-image: linear-gradient(90deg, $black, $black);
+    background-position: left bottom;
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    color: $black;
+    transition: background-size 0.8s ease;
 }
 
 .top-works__article:hover .top-works__underline {
-  background-size: 100% 1px;
+    background-size: 100% 1px;
 }
 
 .top-works__article-text {
-  margin-top: 15px;
-  color: $gray;
-  font-size: 16px;
-  line-height: calc(38 / 16);
+    margin-top: 15px;
+    color: $gray;
+    font-size: 16px;
+    line-height: calc(38 / 16);
 }
 
 .top-works__date {
-  margin-top: 41px;
+    margin-top: 41px;
 }
 
 .top-works__link-container {
-  display: flex;
-  margin-top: 50px;
+    display: flex;
+    margin-top: 50px;
 }
 
 .top-works__link {
-  margin-left: auto;
+    margin-left: auto;
 }
 //top-news
 .top-news {
-  padding-bottom: 171px;
-  background-color: $lightgray;
+    padding-bottom: 171px;
+    background-color: $lightgray;
 }
 .top-news__inner {
-  display: flex;
+    display: flex;
 
-  @include mq("md") {
-    display: block;
-  }
+    @include mq("md") {
+        display: block;
+    }
 }
 .top-news__side {
-  padding-right: 94px;
-  padding-left: 10px;
-  border-right: 1px solid $gray4;
+    padding-right: 94px;
+    padding-left: 10px;
+    border-right: 1px solid $gray4;
 
-  @include mq("md") {
-    border-right: none;
-  }
+    @include mq("md") {
+        border-right: none;
+    }
 }
 .top-news__tag-list {
-  margin-top: 49px;
+    margin-top: 49px;
 
-  @include mq("md") {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 40px;
+    @include mq("md") {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 40px;
 
-    -moz-column-gap: 40px;
-         column-gap: 40px;
-    row-gap: 20px;
-  }
+        -moz-column-gap: 40px;
+        column-gap: 40px;
+        row-gap: 20px;
+    }
 }
 
 .top-news__tag-list-item {
-  color: $gray4;
-  a {
     color: $gray4;
-  }
+    a {
+        color: $gray4;
+    }
 }
 
 .top-news__tag-list-item:not(:first-child) {
-  margin-top: 26px;
+    margin-top: 26px;
 
-  @include mq("md") {
-    margin-top: 0;
-  }
+    @include mq("md") {
+        margin-top: 0;
+    }
 }
 
 .top-news__tag-list-item.top-news__tag-list-item--selected {
-  position: relative;
-  color: $black;
+    position: relative;
+    color: $black;
 }
 .top-news__tag-list-item.top-news__tag-list-item--selected::before {
-  position: absolute;
-  top: 50%;
-  left: -10px;
-  transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  background-color: $dark_navy;
-  content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: $dark_navy;
+    content: "";
 }
 
 .top-news__link-container {
-  display: flex;
-  margin-top: 34px;
+    display: flex;
+    margin-top: 34px;
 }
 
 .top-news__link {
-  margin-left: auto;
+    margin-left: auto;
 }
 
 .top-news__main {
-  width: 100%;
-  padding: 0 40px;
+    width: 100%;
+    padding: 0 40px;
 
-  @include mq("md") {
-    padding-top: 42px;
-  }
+    @include mq("md") {
+        padding-top: 42px;
+    }
 }
 
 .top-news__article {
-  padding-bottom: 30px;
-  border-bottom: 1px solid $gray4;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $gray4;
 }
 
 .top-news__article:first-child {
-  @include mq("md") {
-    padding-top: 30px;
-    border-top: 1px solid $gray4;
-  }
+    @include mq("md") {
+        padding-top: 30px;
+        border-top: 1px solid $gray4;
+    }
 }
 
 .top-news__article:not(:first-child) {
-  padding-top: 30px;
+    padding-top: 30px;
 }
 
 .top-news__tag {
-  margin-left: 34px;
+    margin-left: 34px;
 }
 .top-news__tag + .top-news__tag {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 .top-news__article-title {
-  margin-top: 31px;
-  a {
-    color: $black;
-  }
+    margin-top: 31px;
+    a {
+        color: $black;
+    }
 }

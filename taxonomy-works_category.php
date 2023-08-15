@@ -13,13 +13,17 @@
     <div class="works__inner inner">
         <div class="works-category__list-container">
             <ul class="works-category__list">
-                <li class="category-item-current">すべての実績</li>
+                <li><a class="category-item-other" href="<?php esc_url(home_url('works')) ?>">すべての実績</a></li>
                 <?php
                 $terms = get_terms('works_category');
 
                 foreach ( $terms as $term ) {
                     $term_link = get_term_link( $term );
-                    echo '<li><a class="category-item-other" href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
+                    if (is_tax('works_category', $term)) {
+                        echo '<li class="category-item-current">' . $term->name . '</li>';
+                    } else {
+                        echo '<li><a class="category-item-other" href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
+                    }
                 }
                 ?>
             </ul>

@@ -1651,6 +1651,7 @@ select::-ms-expand {
   background-position: left bottom;
   background-size: 0 1px;
   background-repeat: no-repeat;
+  color: #000000;
   transition: background-size 0.8s ease;
 }
 
