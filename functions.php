@@ -72,3 +72,11 @@ function Change_objectlabel() {
 
 add_action( 'init', 'Change_objectlabel' );
 add_action( 'admin_menu', 'Change_menulabel' );
+
+function bc_limit($trail)
+{
+  if (mb_strlen($trail->breadcrumbs[0]->get_title()) > 10) {
+    $trail->breadcrumbs[0]->set_title(mb_substr($trail->breadcrumbs[0]->get_title(), 0, 11) . '...');
+  }
+}
+add_action('bcn_after_fill', 'bc_limit');
