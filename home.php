@@ -14,7 +14,7 @@
     <div class="news__inner inner">
         <div class="news-category__list-container">
             <ul class="news-category__list">
-                <li class="category-item-current">すべての実績</li>
+                <li class="category-item-current">すべてのお知らせ</li>
                 <?php
                 $terms = get_tags();
 
