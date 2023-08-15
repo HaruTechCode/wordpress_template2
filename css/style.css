@@ -1920,7 +1920,7 @@ select::-ms-expand {
 
 .works-category__list {
   position: sticky;
-  top: 80px;
+  top: 220px;
 }
 @media screen and (max-width: 768px) {
   .works-category__list {
@@ -2061,7 +2061,7 @@ select::-ms-expand {
 
 .news-category__list {
   position: sticky;
-  top: 80px;
+  top: 220px;
 }
 @media screen and (max-width: 768px) {
   .news-category__list {
@@ -2342,6 +2342,10 @@ select::-ms-expand {
 
 .single {
   padding-top: 120px;
+}
+
+.single__tag:not(:first-child) {
+  margin-left: 20px;
 }
 
 .single__inner {

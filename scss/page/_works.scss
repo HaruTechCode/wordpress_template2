@@ -115,7 +115,7 @@
 
 .works-category__list {
     position: sticky;
-    top: 80px;
+    top: 220px;
     //ヘッダーの高さは定数化
 
     @include mq("md") {

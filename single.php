@@ -6,10 +6,10 @@
             <ul>
                 <?php while (have_posts()) : the_post(); ?>
                     <?php
-                    $terms = get_the_category();
+                    $terms = get_the_tags();
                     if($terms) {
                         foreach ($terms as $term) {
-                            echo '<div class="tag"><a href="' . esc_url(get_term_link($term->term_id)) . '">' . $term->name . '</a></div>';
+                            echo '<div class="single__tag tag"><a href="' . esc_url(get_term_link($term->term_id)) . '">' . $term->name . '</a></div>';
                         }
                     }
                     ?>

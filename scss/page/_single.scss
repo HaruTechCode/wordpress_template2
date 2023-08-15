@@ -1,47 +1,49 @@
 @use "../global" as *;
 
 .single {
-    padding-top: 120px;
+  padding-top: 120px;
 }
-
+.single__tag:not(:first-child) {
+  margin-left: 20px;
+}
 .single__inner {
-    width: 100%;
-    max-width: 800px;
-    margin-top: 60px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0 20px 120px;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 20px 120px;
 
-    @include mq("md") {
-        padding: 0 10px;
-    }
+  @include mq("md") {
+    padding: 0 10px;
+  }
 }
 
 .single__date {
-    display: block;
-    margin-top: 36px;
+  display: block;
+  margin-top: 36px;
 }
 
 .single__title {
-    margin-top: 20px;
-    font-weight: $medium;
-    font-size: 26px;
+  margin-top: 20px;
+  font-weight: $medium;
+  font-size: 26px;
 }
 
 .single__img {
-    height: auto;
-    margin-top: 40px;
+  height: auto;
+  margin-top: 40px;
 }
 
 .single__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 280px;
-    height: 43px;
-    margin: 60px auto 0;
-    border: $dark_navy 1px solid;
-    border-radius: 4px;
-    color: $dark_navy;
-    font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 43px;
+  margin: 60px auto 0;
+  border: $dark_navy 1px solid;
+  border-radius: 4px;
+  color: $dark_navy;
+  font-size: 14px;
 }
