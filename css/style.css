@@ -801,15 +801,26 @@ select::-ms-expand {
 }
 
 /*ボタン内spanの形状*/
-.background-flow-left span {
+.background-flow-left {
   display: flex;
   position: relative;
-  z-index: 3;
   color: #ffffff;
 }
 
-.background-flow-left:hover span {
+.background-flow-left__img {
+  z-index: 3;
+}
+
+.background-flow-left__text {
+  z-index: 3;
+}
+
+.background-flow-left:hover {
   color: #011950;
+}
+
+.background-flow-left:hover svg path {
+  fill: #011950;
 }
 
 .background-flow-left:before {
