@@ -3,16 +3,30 @@
 .single {
   padding-top: 120px;
 }
+
+.single__wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 20px 120px;
+
+  @include mq("md") {
+    padding: 0 10px;
+  }
+}
+
 .single__tag:not(:first-child) {
   margin-left: 20px;
 }
-.single__inner {
+.single__main-inner {
   width: 100%;
   max-width: 800px;
   margin-top: 60px;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 20px 120px;
+  padding: 0 20px;
 
   @include mq("md") {
     padding: 0 10px;
@@ -46,4 +60,8 @@
   border-radius: 4px;
   color: $dark_navy;
   font-size: 14px;
+}
+
+.single__sidebar {
+  width: 300px;
 }

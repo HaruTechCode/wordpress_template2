@@ -1,0 +1,61 @@
+@use "../global" as *;
+
+.sidebar__title {
+  width: 100%;
+  padding: 18px;
+  background-color: $dark_navy2;
+  color: $white;
+  font-size: 14px;
+}
+
+.sidebar__title:not(:first-child) {
+  margin-top: 40px;
+}
+
+.sidebar__card:not(:last-child) {
+  border-bottom: 1px #e4e4e4 solid;
+}
+
+.sidebar__card-link {
+  display: flex;
+  padding: 18px;
+}
+
+.sidebar__img {
+  width: 100px;
+  height: 100px;
+
+  object-fit: cover;
+}
+
+.sidebar__card-title {
+  color: #040404;
+  font-weight: $regular;
+  font-size: 12px;
+  line-height: calc(28 / 12);
+}
+
+.sidebar__card-body {
+  display: flex;
+  flex-direction: column;
+  margin-left: 18px;
+}
+
+.sidebar__date {
+  margin-top: auto;
+  font-size: 10px;
+}
+.sidebar__list li {
+  margin: 0 18px;
+}
+
+.sidebar__list li:not(:last-child) {
+  border-bottom: 1px #e4e4e4 solid;
+}
+
+.sidebar__list li a {
+  display: block;
+  padding: 18px 0;
+  color: #000000;
+  font-size: 14px;
+}
