@@ -2585,3 +2585,51 @@ select::-ms-expand {
   color: #001e63;
   font-size: 14px;
 }
+
+.not-found {
+  padding-bottom: 120px;
+}
+@media screen and (max-width: 768px) {
+  .not-found {
+    padding-bottom: 80px;
+  }
+}
+
+.not-found-fv {
+  position: relative;
+}
+
+.not-found-fv__body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 768px) {
+  .not-found-fv__body {
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.not-found-fv__title {
+  color: #ffffff;
+  font-size: 70px;
+  font-family: "Oswald";
+}
+@media screen and (max-width: 768px) {
+  .not-found-fv__title {
+    font-size: 35px;
+  }
+}
+
+.not-found-fv__text {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 2.375;
+}
+
+.not-found__text {
+  margin-top: 40px;
+}
